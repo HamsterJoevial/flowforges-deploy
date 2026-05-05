@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlowForges — Applications mobiles pour professionnels</title>
+  <meta name="description" content="FlowForges conçoit des applications pour les professionnels et les particuliers. PIVOT pour les visites immobilières, VigieContrat pour l'analyse de contrats.">
+  <meta name="theme-color" content="#358A9F">
+  <link rel="canonical" href="https://flowforges.fr/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="FlowForges — Applications mobiles pour professionnels">
+  <meta property="og:description" content="Des outils mobiles pensés pour le terrain. Simples, fiables, utiles.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://flowforges.fr/">
+  <meta property="og:image" content="https://flowforges.fr/og-image.png">
+  <meta property="og:site_name" content="FlowForges">
+  <meta property="og:locale" content="fr_FR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FlowForges — Applications mobiles pour professionnels">
+  <meta name="twitter:description" content="Des outils mobiles pensés pour le terrain. Simples, fiables, utiles.">
+  <meta name="twitter:image" content="https://flowforges.fr/og-image.png">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "FlowForges",
+    "url": "https://flowforges.fr/",
+    "description": "Studio indépendant d'applications mobiles pour les professionnels terrain.",
+    "email": "contact@flowforges.fr"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "FlowForges",
+    "url": "https://flowforges.fr/"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #358A9F;
+      --primary-dark: #2A7080;
+      --primary-light: #E8F4F7;
+      --accent: #D4A843;
+      --accent-light: #FBF4E4;
+      --bg: #F6F7FA;
+      --surface: #FFFFFF;
+      --text: #0D1320;
+      --text-secondary: #5A6577;
+      --text-tertiary: #8B95A5;
+      --border: #D8DCE4;
+      --border-light: #E8EBF0;
+      --success: #3DAA6D;
+      --radius: 12px;
+      --radius-lg: 20px;
+      --shadow-sm: 0 1px 3px rgba(13,19,32,0.06);
+      --shadow-md: 0 4px 12px rgba(13,19,32,0.08);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg); color: var(--text);
+      line-height: 1.6; -webkit-font-smoothing: antialiased;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background-image: radial-gradient(circle, var(--primary) 0.5px, transparent 0.5px);
+      background-size: 32px 32px; opacity: 0.025; pointer-events: none; z-index: 0;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(246,247,250,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-light);
+    }
+    .nav-inner {
+      max-width: 960px; margin: 0 auto; padding: 0 2rem;
+      display: flex; align-items: center; justify-content: space-between; height: 58px;
+    }
+    .nav-brand {
+      display: flex; align-items: center; gap: 10px;
+      text-decoration: none; color: var(--text);
+      font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 1rem;
+    }
+    .nav-mark {
+      width: 30px; height: 30px; border-radius: 8px; overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .nav-mark img { width: 100%; height: 100%; object-fit: cover; }
+    .nav-contact {
+      font-size: 0.85rem; font-weight: 500; color: var(--text-secondary);
+      text-decoration: none; transition: color 0.2s;
+    }
+    .nav-contact:hover { color: var(--primary); }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh; display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      padding: 7rem 2rem 4rem; text-align: center;
+      position: relative;
+      background: linear-gradient(180deg, var(--primary-light) 0%, var(--bg) 60%);
+    }
+    .hero::after {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--primary), transparent);
+      opacity: 0.2; animation: scanline 10s linear infinite; pointer-events: none;
+    }
+    @keyframes scanline { 0% { top: 0; } 100% { top: 100%; } }
+    .hero > * { position: relative; z-index: 1; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 100px; padding: 5px 14px;
+      font-size: 0.78rem; color: var(--text-secondary);
+      margin-bottom: 2rem; box-shadow: var(--shadow-sm);
+    }
+    .badge-dot { width: 7px; height: 7px; background: var(--success); border-radius: 50%; animation: blink 2s ease-in-out infinite; }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+    .hero h1 {
+      font-size: clamp(2.8rem, 7vw, 5rem); font-weight: 800;
+      letter-spacing: -2px; line-height: 1.05; margin-bottom: 1.25rem;
+    }
+    .hero h1 em { font-style: normal; color: var(--primary); }
+    .hero p {
+      font-size: clamp(1rem, 2vw, 1.15rem); color: var(--text-secondary);
+      max-width: 420px; margin: 0 auto 3rem;
+    }
+    .hero-sys {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.68rem;
+      color: var(--text-tertiary); letter-spacing: 1.5px;
+      display: flex; align-items: center; gap: 8px;
+    }
+
+    /* DIVIDER */
+    .divider {
+      display: flex; align-items: center; gap: 1rem;
+      max-width: 200px; margin: 0 auto; padding: 3rem 0;
+    }
+    .divider::before, .divider::after {
+      content: ''; flex: 1; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--primary), transparent); opacity: 0.2;
+    }
+    .divider-dot {
+      width: 8px; height: 8px; background: var(--primary);
+      transform: rotate(45deg); opacity: 0.3;
+    }
+
+    /* APPS */
+    .section { max-width: 960px; margin: 0 auto; padding: 0 2rem 5rem; position: relative; z-index: 1; }
+    .section-label {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.72rem;
+      font-weight: 700; color: var(--accent); letter-spacing: 2px;
+      text-transform: uppercase; text-align: center; margin-bottom: 2.5rem;
+    }
+    .section-label::before { content: '[ '; opacity: 0.4; }
+    .section-label::after { content: ' ]'; opacity: 0.4; }
+
+    .apps-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.25rem;
+    }
+    .app-card {
+      background: var(--surface); border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg); padding: 2rem;
+      box-shadow: var(--shadow-sm); position: relative; overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex; flex-direction: column; gap: 1rem;
+    }
+    .app-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .app-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    }
+    .app-card.pivot::before { background: linear-gradient(90deg, var(--primary), var(--accent)); }
+    .app-card.vigie::before { background: linear-gradient(90deg, #C62828, #EF5350); }
+    .app-card.dicteosante::before { background: linear-gradient(90deg, #D06638, #5B8F7A); }
+    .card-icon.blue { background: #E3F2FD; }
+    .card-status.live { background: #E3F2FD; color: #1565C0; border: 1px solid rgba(21,101,192,0.25); }
+    .card-status.teal { background: var(--primary-light); color: #0D6E8A; border: 1px solid rgba(53,138,159,0.3); }
+    .card-status.red { background: #FFEBEE; color: #C62828; border: 1px solid rgba(198,40,40,0.25); }
+    .card-cta.blue-btn { background: #1565C0; color: #fff; }
+    .card-cta.blue-btn:hover { background: #0D47A1; }
+    .card-top { display: flex; align-items: center; justify-content: space-between; }
+    .card-icon {
+      width: 52px; height: 52px; border-radius: 14px; overflow: hidden;
+      display: flex; align-items: center; justify-content: center; font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+    .card-icon img { width: 100%; height: 100%; object-fit: cover; border-radius: 14px; }
+    .card-icon.teal { background: var(--primary-light); }
+    .card-icon.red { background: #FFEBEE; }
+    .card-icon.green { background: #E8F5E9; }
+    .card-status {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.68rem;
+      font-weight: 700; padding: 4px 10px; border-radius: 20px; letter-spacing: 0.5px;
+    }
+    .card-status.beta { background: var(--accent-light); color: #92660A; border: 1px solid rgba(212,168,67,0.3); }
+    .card-status.soon { background: #E8F4F7; color: #0D6E8A; border: 1px solid rgba(13,110,138,0.25); }
+    .card-status.building { background: #E8F5E9; color: #2E7D32; border: 1px solid rgba(46,125,50,0.25); }
+    .card-name { font-size: 1.2rem; font-weight: 800; letter-spacing: -0.5px; }
+    .card-tagline { font-size: 0.9rem; color: var(--text-secondary); flex: 1; }
+    .card-cta {
+      display: inline-flex; align-items: center; gap: 6px; align-self: flex-start;
+      font-size: 0.85rem; font-weight: 600; padding: 9px 16px;
+      border-radius: var(--radius); text-decoration: none; transition: all 0.2s;
+    }
+    .card-cta.teal-btn { background: var(--primary); color: #fff; }
+    .card-cta.teal-btn:hover { background: var(--primary-dark); }
+    .card-cta.red-btn { background: #C62828; color: #fff; }
+    .card-cta.red-btn:hover { background: #B71C1C; }
+    .card-cta.green-btn { background: #2E7D32; color: #fff; }
+    .card-cta.green-btn:hover { background: #1B5E20; }
+
+    /* STUDIO */
+    .studio {
+      text-align: center; max-width: 520px; margin: 0 auto;
+      padding: 0 2rem 5rem; position: relative; z-index: 1;
+    }
+    .studio h2 {
+      font-size: 1.5rem; font-weight: 800; margin-bottom: 1rem; letter-spacing: -0.5px;
+    }
+    .studio p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.75; }
+
+    /* CONTACT */
+    .contact {
+      text-align: center; padding: 0 2rem 6rem; position: relative; z-index: 1;
+    }
+    .contact-box {
+      display: inline-flex; flex-direction: column; align-items: center; gap: 1.25rem;
+      background: var(--surface); border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg); padding: 2.5rem 3rem;
+      box-shadow: var(--shadow-sm); max-width: 420px;
+    }
+    .contact-box p { font-size: 0.95rem; color: var(--text-secondary); }
+    .contact-link {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--primary); color: #fff;
+      font-size: 0.9rem; font-weight: 600; padding: 11px 22px;
+      border-radius: var(--radius); text-decoration: none; transition: background 0.2s;
+    }
+    .contact-link:hover { background: var(--primary-dark); }
+
+    /* FOOTER */
+    footer {
+      text-align: center; padding: 1.5rem; border-top: 1px solid var(--border-light);
+      font-size: 0.78rem; color: var(--text-tertiary);
+      position: relative; z-index: 1;
+    }
+    footer a { color: var(--text-tertiary); text-decoration: none; }
+    footer a:hover { color: var(--primary); }
+
+    @media (max-width: 640px) {
+      .apps-grid { grid-template-columns: 1fr; }
+      .contact-box { padding: 2rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="#">
+      <div class="nav-mark"><img src="/assets/flowforges_icon_1024.jpg" alt="FlowForges"></div>
+      FlowForges
+    </a>
+    <a class="nav-contact" href="mailto:contact@flowforges.fr">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">
+    <span class="badge-dot"></span>
+    Studio indépendant — Apps mobiles
+  </div>
+  <h1>Flow<em>Forges</em></h1>
+  <p>Des outils mobiles pensés pour le terrain. Simples, fiables, utiles.</p>
+  <div class="hero-sys">
+    <span class="badge-dot"></span>
+    SYS.ONLINE // v2.0
+  </div>
+</section>
+
+<div class="divider"><div class="divider-dot"></div></div>
+
+<!-- APPS -->
+<section class="section">
+  <p class="section-label">Applications</p>
+  <div class="apps-grid">
+
+    <div class="app-card pivot">
+      <div class="card-top">
+        <div class="card-icon"><img src="/assets/pivot_icon_1024.png" alt="PIVOT"></div>
+        <span class="card-status teal">iOS &amp; Android</span>
+      </div>
+      <div class="card-name">PIVOT</div>
+      <div class="card-tagline">Documentez vos visites immobilières en quelques minutes. Export PDF professionnel.</div>
+      <a class="card-cta teal-btn" href="pivot/index.html">Découvrir PIVOT →</a>
+    </div>
+
+    <div class="app-card vigie">
+      <div class="card-top">
+        <div class="card-icon"><img src="/assets/vigiecontrat_icon_1024.png" alt="VigieContrat"></div>
+        <span class="card-status red">iOS &amp; Android</span>
+      </div>
+      <div class="card-name">VigieContrat</div>
+      <div class="card-tagline">Détecte les clauses abusives dans tes contrats. Résultat en 30 secondes.</div>
+      <a class="card-cta red-btn" href="vigiecontrat/index.html">Découvrir VigieContrat →</a>
+    </div>
+
+    <div class="app-card dicteosante">
+      <div class="card-top">
+        <div class="card-icon"><img src="/assets/dicteosante_icon_1024.png" alt="DictéoSanté"></div>
+        <span class="card-status building">En développement</span>
+      </div>
+      <div class="card-name">DictéoSanté</div>
+      <div class="card-tagline">Dictée médicale pour para-médicaux. Compte-rendu rédigé par l'IA en 30 secondes.</div>
+      <span class="card-cta green-btn" style="cursor:default; opacity:0.7;">Bientôt disponible</span>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"><div class="divider-dot"></div></div>
+
+<!-- STUDIO -->
+<section class="studio">
+  <p class="section-label" style="margin-bottom:1.5rem;">Studio</p>
+  <h2>Studio indépendant.</h2>
+  <p>Pas d'investisseurs, pas de roadmap dictée par un comité. On choisit les problèmes qu'on résout — et on les résout jusqu'au bout.</p>
+</section>
+
+<div class="divider"><div class="divider-dot"></div></div>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="contact-box">
+    <p class="section-label" style="margin:0;">Contact</p>
+    <p>Une question, un partenariat, une idée ?</p>
+    <a class="contact-link" href="mailto:contact@flowforges.fr">✉ contact@flowforges.fr</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 FlowForges ·
+    <a href="vigiecontrat/privacy.html">Confidentialité VigieContrat</a> ·
+    <a href="pivot/privacy-policy.html">Confidentialité PIVOT</a>
+  </p>
+</footer>
+
+</body>
+</html>

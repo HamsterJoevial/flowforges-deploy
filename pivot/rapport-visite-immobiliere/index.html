@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport de visite immobilière PDF : comment le faire ?</title>
+    <meta name="description" content="Comment créer un rapport de visite immobilière professionnel en PDF ? Méthode, éléments indispensables et app mobile pour documenter vos visites facilement.">
+    <link rel="canonical" href="https://flowforges.fr/pivot/rapport-visite-immobiliere/">
+
+    <meta property="og:title" content="Rapport de visite immobilière PDF : comment le faire ?">
+    <meta property="og:description" content="Créez un rapport de visite immobilière professionnel en PDF. Méthode complète et app mobile dédiée.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://flowforges.fr/pivot/rapport-visite-immobiliere/">
+    <meta property="og:image" content="https://flowforges.fr/og-image.png">
+    <meta property="og:locale" content="fr_FR">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Comment faire un rapport de visite immobilière PDF ?",
+      "description": "Guide pratique pour créer un compte rendu de visite immobilière structuré et exportable en PDF.",
+      "url": "https://flowforges.fr/pivot/rapport-visite-immobiliere/",
+      "publisher": { "@type": "Organization", "name": "FlowForges", "url": "https://flowforges.fr/" }
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #0D6E8A; --primary-light: #1A8FAD; --primary-dark: #095672;
+            --primary-bg: #E8F5F9; --accent: #D4A843;
+            --surface: #F6F7FA; --surface-card: #FFFFFF;
+            --text: #0D1320; --text-secondary: #5A6577; --text-muted: #9BA5B4;
+            --border: #D8DCE4; --radius: 12px; --radius-lg: 20px;
+            --shadow: 0 1px 3px rgba(0,0,0,0.06);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--surface); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(246,247,250,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(216,220,228,0.6); }
+        .nav-inner { max-width: 800px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 58px; }
+        .nav-brand { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 0.9rem; text-decoration: none; color: var(--text); display: flex; align-items: center; gap: 8px; }
+        .nav-mark { width: 28px; height: 28px; background: #358A9F; border-radius: 7px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 0.75rem; font-weight: 800; }
+        .nav-back { font-size: 0.82rem; color: var(--primary); text-decoration: none; font-weight: 600; }
+        .nav-back:hover { text-decoration: underline; }
+        .article-wrap { max-width: 800px; margin: 0 auto; padding: 5rem 2rem 3rem; }
+        .article-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; font-weight: 700; color: var(--accent); letter-spacing: 2px; text-transform: uppercase; }
+        .article-tag::before { content: '[ '; opacity: 0.4; } .article-tag::after { content: ' ]'; opacity: 0.4; }
+        h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); font-weight: 800; letter-spacing: -1px; line-height: 1.15; margin: 0.75rem 0 1rem; }
+        .article-intro { font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 2.5rem; border-left: 3px solid var(--primary); padding-left: 1rem; }
+        h2 { font-size: 1.35rem; font-weight: 800; margin: 2.5rem 0 1rem; letter-spacing: -0.5px; }
+        p { margin-bottom: 1rem; font-size: 0.97rem; color: var(--text-secondary); }
+        ul, ol { padding-left: 1.5rem; margin-bottom: 1rem; }
+        li { font-size: 0.97rem; color: var(--text-secondary); margin-bottom: 0.4rem; }
+        strong { color: var(--text); font-weight: 600; }
+        .steps-list { list-style: none; padding: 0; counter-reset: steps; }
+        .steps-list li { counter-increment: steps; padding: 1rem 1rem 1rem 3rem; background: var(--surface-card); border: 1px solid var(--border); border-radius: var(--radius-lg); margin-bottom: 0.75rem; position: relative; }
+        .steps-list li::before { content: counter(steps); position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); width: 1.5rem; height: 1.5rem; background: var(--primary-bg); color: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.82rem; }
+        .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+        .compare-card { background: var(--surface-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 1.25rem; }
+        .compare-card.good { border-color: var(--primary); }
+        .compare-title { font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.75rem; color: var(--text-muted); }
+        .compare-title.good { color: var(--primary); }
+        .compare-card ul { padding-left: 0; }
+        .compare-card li { font-size: 0.88rem; padding-left: 0; }
+        .compare-card li::before { display: none; }
+        .compare-card.good li::before { display: none; }
+    .related {
+      margin-top: 3rem;
+      padding: 1.5rem 1.75rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--primary);
+      border-radius: var(--radius);
+    }
+    .related-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin: 0 0 0.85rem;
+    }
+    .related-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .related-list li { color: var(--text); line-height: 1.5; }
+    .related-list a {
+      color: var(--text);
+      font-weight: 500;
+      font-size: 0.95rem;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+    .related-list a:hover { color: var(--primary); border-bottom-color: var(--primary); text-decoration: none; }
+
+    .cta-box { background: linear-gradient(135deg, var(--primary-bg), #fff); border: 1px solid var(--primary); border-radius: var(--radius-lg); padding: 2rem; text-align: center; margin: 3rem 0; }
+        .cta-box h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 0.5rem; }
+        .cta-box p { font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 1.5rem; }
+        .store-btns { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
+        .store-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--primary); color: #fff; font-weight: 700; font-size: 0.9rem; padding: 11px 22px; border-radius: var(--radius); text-decoration: none; transition: background 0.2s; }
+        .store-btn:hover { background: var(--primary-dark); }
+        footer { text-align: center; padding: 2rem; border-top: 1px solid var(--border); font-size: 0.78rem; color: var(--text-muted); }
+        footer a { color: var(--text-muted); text-decoration: none; }
+        footer a:hover { color: var(--primary); }
+        @media (max-width: 640px) { .compare-grid { grid-template-columns: 1fr; } }
+    </style>
+  <script defer src="https://umami.flowforges.fr/script.js" data-website-id="38464e9c-d761-4f60-9e5a-03b6f17fbb9d"></script>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a class="nav-brand" href="../../index.html"><div class="nav-mark">FF</div>FlowForges</a>
+        <a class="nav-back" href="../">← PIVOT</a>
+    </div>
+</nav>
+
+<div class="article-wrap">
+    <span class="article-tag">Documentation immobilière</span>
+    <h1>Comment faire un rapport de visite immobilière PDF ?</h1>
+    <p class="article-intro">Un rapport de visite immobilière bien fait vous permet de vous souvenir précisément de chaque bien visité, de comparer objectivement vos options et de partager vos impressions avec votre entourage ou votre conseiller. Voici comment en créer un efficacement.</p>
+
+    <h2>Pourquoi rédiger un rapport de visite ?</h2>
+    <p>La mémoire est sélective. Après avoir visité 5 ou 6 biens immobiliers en quelques semaines, les souvenirs se brouillent : on ne sait plus quel appartement avait la cave humide, lequel avait la belle lumière le matin, ou lequel était à 200 m d'une voie ferrée.</p>
+    <p>Un rapport de visite structuré résout ce problème. Il capture les informations objectives pendant la visite — au moment où l'observation est fraîche — et permet de relire, comparer et décider avec toutes les données en main.</p>
+    <p>C'est aussi un outil de communication : vous pouvez le partager avec votre conjoint, vos parents, votre notaire ou votre courtier pour obtenir un avis externe éclairé.</p>
+
+    <h2>Ce que doit contenir un bon rapport de visite</h2>
+    <p>Un rapport de visite immobilière efficace contient au minimum ces éléments :</p>
+    <ul>
+        <li><strong>Informations générales :</strong> adresse, surface, étage, année de construction, prix demandé, date de visite</li>
+        <li><strong>Photos par pièce :</strong> salon, chambres, cuisine, salle de bain, cave, extérieur — annotées si possible</li>
+        <li><strong>État général :</strong> points forts, points faibles observés, travaux visibles à prévoir</li>
+        <li><strong>Diagnostics :</strong> DPE (étiquette énergie), présence d'amiante ou de plomb, état électrique</li>
+        <li><strong>Environnement :</strong> nuisances sonores, exposition, voisinage, transports</li>
+        <li><strong>Verdict global :</strong> votre impression générale et votre décision (à rappeler, à oublier, à faire une offre)</li>
+    </ul>
+
+    <h2>Méthode classique vs méthode structurée</h2>
+    <div class="compare-grid">
+        <div class="compare-card">
+            <div class="compare-title">Méthode classique</div>
+            <ul style="list-style: disc; padding-left: 1.2rem;">
+                <li>Notes papier ou mémo téléphone</li>
+                <li>Photos désordonnées dans la galerie</li>
+                <li>Aucune structure par pièce</li>
+                <li>Oubli des points techniques</li>
+                <li>Comparaison difficile a posteriori</li>
+            </ul>
+        </div>
+        <div class="compare-card good">
+            <div class="compare-title good">Méthode structurée</div>
+            <ul style="list-style: disc; padding-left: 1.2rem;">
+                <li>Photos annotées en temps réel</li>
+                <li>Checklist par catégorie</li>
+                <li>Diagnostics vérifiés systématiquement</li>
+                <li>Verdict et score par visite</li>
+                <li>Export PDF partageable</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>Comment créer un rapport de visite PDF étape par étape</h2>
+    <ol class="steps-list">
+        <li><strong>Avant la visite :</strong> préparez vos catégories d'observation (structure, installations, environnement, diagnostics). Avoir un cadre clair vous évite d'oublier des points importants dans l'excitation de la visite.</li>
+        <li><strong>Pendant la visite :</strong> photographiez chaque pièce systématiquement. Annotez directement sur les photos les défauts observés (trace d'humidité, fissure, équipement vétuste). Prenez des notes sur l'orientation, la luminosité, les nuisances sonores.</li>
+        <li><strong>Vérifiez les diagnostics :</strong> demandez le DDT (Dossier de Diagnostics Techniques) à l'agent. Notez l'étiquette DPE, les mentions amiante, plomb, termites. Ces informations figurent dans le rapport.</li>
+        <li><strong>Évaluez votre verdict :</strong> attribuez un score ou une appréciation globale pendant que vos impressions sont fraîches. Identifiez les points non négociables et les points acceptables avec des travaux.</li>
+        <li><strong>Exportez en PDF :</strong> compilez toutes vos notes, photos et observations dans un document structuré, lisible et partageable.</li>
+    </ol>
+
+    <h2>Outils pour créer un rapport de visite</h2>
+    <p>Plusieurs options existent :</p>
+    <ul>
+        <li><strong>Google Docs ou Word :</strong> flexible mais chronophage — il faut tout organiser manuellement après la visite.</li>
+        <li><strong>Notion ou Airtable :</strong> plus structuré, mais nécessite une configuration préalable et une connexion internet.</li>
+        <li><strong>Template Excel :</strong> pratique pour comparer plusieurs biens, mais pas adapté aux photos.</li>
+        <li><strong>App mobile dédiée :</strong> la solution la plus efficace — on documente en temps réel, pendant la visite, avec photos annotées et export PDF automatique.</li>
+    </ul>
+    <p>PIVOT est une app mobile (iOS et Android) conçue spécifiquement pour documenter les visites immobilières. Elle structure la saisie par catégories (pièces, diagnostics, environnement), permet d'annoter les photos directement sur l'écran, et génère un PDF complet à partager en un clic.</p>
+    <aside class="related" aria-label="Articles liés">
+      <!-- related-block -->
+      <h2 class="related-title">Voir aussi</h2>
+      <ul class="related-list">
+        <li><a href="https://flowforges.fr/pivot/checklist-visite-maison/">Checklist visite maison</a></li>
+        <li><a href="https://flowforges.fr/pivot/comparer-biens-immobiliers/">Comment comparer plusieurs biens immobiliers efficacement</a></li>
+        <li><a href="https://flowforges.fr/pivot/documents-obligatoires-vente-immobiliere-liste/">Documents obligatoires pour une vente immobilière</a></li>
+      </ul>
+    </aside>
+
+
+    <div class="cta-box">
+        <h3>Générez votre rapport de visite en PDF</h3>
+        <p>PIVOT structure vos visites, photos et observations — et génère le rapport en un clic. Gratuit pour 3 visites, puis 49,99 € sans abonnement.</p>
+        <div class="store-btns">
+            <a class="store-btn" data-umami-event="cta_app_store_click" href="https://apps.apple.com/app/pivot-visites-immobilieres/id6759809220">App Store →</a>
+            <a class="store-btn" data-umami-event="cta_play_store_click" href="https://play.google.com/store/apps/details?id=com.joffrey.pivot">Google Play →</a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 FlowForges &middot; <a href="../../index.html">Accueil</a> &middot; <a href="../">PIVOT</a> &middot; <a href="mailto:contact@flowforges.fr">Contact</a></p>
+</footer>
+
+</body>
+</html>

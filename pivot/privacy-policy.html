@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Politique de confidentialité — PIVOT</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      line-height: 1.7;
+      padding: 2rem 1rem;
+    }
+    .container { max-width: 780px; margin: 0 auto; }
+    header {
+      margin-bottom: 3rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #1e293b;
+    }
+    header a { color: #60a5fa; text-decoration: none; font-size: 0.9rem; }
+    h1 { font-size: 2rem; font-weight: 700; margin-top: 1rem; color: #f1f5f9; }
+    .updated { color: #64748b; font-size: 0.875rem; margin-top: 0.5rem; }
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #f1f5f9;
+      margin-top: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+    p { color: #cbd5e1; margin-bottom: 0.75rem; }
+    ul { color: #cbd5e1; padding-left: 1.5rem; margin-bottom: 0.75rem; }
+    ul li { margin-bottom: 0.4rem; }
+    .highlight {
+      background: #1e293b;
+      border-left: 3px solid #4A6FA5;
+      padding: 1rem 1.25rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1.25rem 0;
+    }
+    .highlight p { margin: 0; color: #93c5fd; }
+    .zero-knowledge {
+      background: #0c1a2e;
+      border: 1px solid #1e3a5f;
+      border-radius: 8px;
+      padding: 1.25rem;
+      margin: 1.5rem 0;
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+    }
+    .zero-knowledge .icon { font-size: 1.5rem; flex-shrink: 0; }
+    .zero-knowledge p { margin: 0; color: #93c5fd; }
+    a { color: #60a5fa; }
+    footer {
+      margin-top: 4rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #1e293b;
+      color: #475569;
+      font-size: 0.875rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a href="https://flowforges.fr/">← FlowForges</a>
+      <h1>Politique de confidentialité</h1>
+      <p class="updated">Application PIVOT — Dernière mise à jour : 10 mars 2026</p>
+    </header>
+
+    <div class="zero-knowledge">
+      <span class="icon">🔒</span>
+      <p><strong>PIVOT est une application zero-knowledge.</strong> Vos photos, notes, adresses et données de visite ne quittent jamais votre appareil. FlowForges n'y a aucun accès.</p>
+    </div>
+
+    <h2>1. Qui sommes-nous</h2>
+    <p>PIVOT est édité par FlowForges, représenté par Joffrey Desforges, France.</p>
+    <p>Contact : <a href="mailto:support@flowforges.fr">support@flowforges.fr</a></p>
+
+    <h2>2. Principe fondamental : zéro collecte de données de visite</h2>
+    <p>PIVOT est conçu selon le principe <strong>zero-knowledge</strong> :</p>
+    <ul>
+      <li>Vos photos, vidéos, enregistrements audio, notes, adresses et checklists sont stockés <strong>exclusivement sur votre appareil</strong></li>
+      <li>FlowForges n'a aucun accès à ces données</li>
+      <li>Aucun serveur central ne stocke vos visites</li>
+      <li>L'export et la synchronisation cloud utilisent <strong>votre propre</strong> Google Drive ou OneDrive — pas un serveur FlowForges</li>
+    </ul>
+
+    <h2>3. Données effectivement collectées</h2>
+    <p>PIVOT collecte uniquement les données strictement nécessaires à son fonctionnement :</p>
+
+    <h3 style="color:#94a3b8; font-size:1rem; margin-top:1.25rem; margin-bottom:0.5rem;">3.1 Facturation (via App Store / Google Play)</h3>
+    <ul>
+      <li>Achat in-app du plan Pro (achat unique, 49,99 EUR) géré exclusivement par Apple App Store ou Google Play</li>
+      <li>FlowForges ne voit pas vos informations bancaires</li>
+      <li>La preuve d'achat est vérifiée via un service sécurisé (Supabase Edge Function) — aucun identifiant personnel n'est conservé</li>
+    </ul>
+
+    <h3 style="color:#94a3b8; font-size:1rem; margin-top:1.25rem; margin-bottom:0.5rem;">3.2 Assistant IRIS (optionnel)</h3>
+    <p>Si vous utilisez IRIS, l'assistant IA intégré à PIVOT :</p>
+    <ul>
+      <li>Vos questions sont transmises à <strong>Claude (Anthropic, États-Unis)</strong> via un proxy sécurisé (Supabase Edge Function)</li>
+      <li>Ce traitement implique un <strong>transfert de données hors Union européenne</strong> (serveurs Anthropic aux USA)</li>
+      <li>Aucun historique de conversation n'est conservé côté serveur après la session</li>
+      <li>IRIS est alimenté par Claude — son traitement est soumis à la <a href="https://www.anthropic.com/privacy" target="_blank">politique de confidentialité d'Anthropic</a></li>
+    </ul>
+
+    <h3 style="color:#94a3b8; font-size:1rem; margin-top:1.25rem; margin-bottom:0.5rem;">3.3 Authentification cloud (optionnelle)</h3>
+    <p>Si vous connectez Google Drive pour la synchronisation :</p>
+    <ul>
+      <li>Votre <strong>adresse email Google</strong> est lue pour identifier votre compte Drive — elle n'est pas stockée par FlowForges</li>
+      <li>Les tokens OAuth sont stockés <strong>uniquement sur votre appareil</strong> (Keychain iOS / Keystore Android)</li>
+      <li>FlowForges ne stocke pas vos identifiants cloud</li>
+      <li>La synchronisation s'effectue directement entre votre appareil et votre compte cloud personnel</li>
+    </ul>
+
+    <h2>4. Transferts internationaux de données</h2>
+    <p>Certains services tiers utilisés par PIVOT traitent des données en dehors de l'Union européenne :</p>
+    <table style="width:100%; border-collapse:collapse; margin: 1rem 0; font-size:0.9rem;">
+      <thead>
+        <tr style="border-bottom: 1px solid #334155;">
+          <th style="text-align:left; padding: 0.5rem 0.75rem; color:#94a3b8;">Service</th>
+          <th style="text-align:left; padding: 0.5rem 0.75rem; color:#94a3b8;">Finalité</th>
+          <th style="text-align:left; padding: 0.5rem 0.75rem; color:#94a3b8;">Localisation</th>
+          <th style="text-align:left; padding: 0.5rem 0.75rem; color:#94a3b8;">Données concernées</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="border-bottom: 1px solid #1e293b;">
+          <td style="padding: 0.5rem 0.75rem; color:#cbd5e1;"><strong>Anthropic (Claude)</strong></td>
+          <td style="padding: 0.5rem 0.75rem; color:#cbd5e1;">Assistant IRIS (optionnel)</td>
+          <td style="padding: 0.5rem 0.75rem; color:#cbd5e1;">États-Unis</td>
+          <td style="padding: 0.5rem 0.75rem; color:#cbd5e1;">Questions posées à IRIS</td>
+        </tr>
+        <tr style="border-bottom: 1px solid #1e293b;">
+          <td style="padding: 0.5rem 0.75rem; color:#cbd5e1;"><strong>Supabase</strong></td>
+          <td style="padding: 0.5rem 0.75rem; color:#cbd5e1;">Proxy IRIS + vérification achat</td>
+          <td style="padding: 0.5rem 0.75rem; color:#cbd5e1;">UE / USA (AWS)</td>
+          <td style="padding: 0.5rem 0.75rem; color:#cbd5e1;">Relais de requêtes (sans stockage)</td>
+        </tr>
+        <tr>
+          <td style="padding: 0.5rem 0.75rem; color:#cbd5e1;"><strong>Firebase (Google)</strong></td>
+          <td style="padding: 0.5rem 0.75rem; color:#cbd5e1;">Sécurité applicative (App Check)</td>
+          <td style="padding: 0.5rem 0.75rem; color:#cbd5e1;">USA / monde</td>
+          <td style="padding: 0.5rem 0.75rem; color:#cbd5e1;">Identifiant appareil (token anonyme)</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Ces transferts sont réalisés dans le respect du RGPD, en s'appuyant sur les mécanismes de transfert appropriés (clauses contractuelles types, Privacy Shield successeur).</p>
+
+    <h2>5. Données non collectées</h2>
+    <div class="highlight">
+      <p>PIVOT ne collecte <strong>aucune</strong> donnée analytique, aucun identifiant publicitaire, aucune donnée de localisation, et n'utilise aucun SDK de tracking tiers.</p>
+    </div>
+
+    <h2>6. Durée de conservation des données</h2>
+    <ul>
+      <li><strong>Données de visite</strong> : stockées sur votre appareil, conservées jusqu'à suppression manuelle par l'utilisateur</li>
+      <li><strong>Questions IRIS</strong> : non conservées côté serveur — transmises en transit uniquement, aucun stockage après la session</li>
+      <li><strong>Tokens d'authentification cloud</strong> : conservés sur l'appareil jusqu'à déconnexion manuelle</li>
+      <li><strong>Token App Check Firebase</strong> : durée de vie courte, géré automatiquement par le SDK Firebase</li>
+      <li><strong>Données de facturation</strong> : gérées par Apple App Store / Google Play selon leurs propres politiques de conservation</li>
+    </ul>
+
+    <h2>7. Sécurité des données locales</h2>
+    <ul>
+      <li>La base de données locale est chiffrée (AES-256 via SQLCipher)</li>
+      <li>Les tokens d'authentification cloud sont stockés dans le trousseau sécurisé de l'OS</li>
+      <li>L'app détecte les appareils compromis (jailbreak / root) et vous en informe</li>
+    </ul>
+
+    <h2>8. Vos droits (RGPD)</h2>
+    <p>Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez des droits suivants :</p>
+    <ul>
+      <li><strong>Droit d'accès</strong> : vos données de visite sont intégralement sur votre appareil — vous y avez un accès complet via l'application</li>
+      <li><strong>Droit de rectification</strong> : modifiez vos données directement dans l'application</li>
+      <li><strong>Droit à l'effacement (Art. 17)</strong> : supprimez vos visites depuis l'application. Pour une suppression complète incluant les données de facturation, contactez <a href="mailto:support@flowforges.fr">support@flowforges.fr</a> en précisant votre identifiant Apple/Google</li>
+      <li><strong>Droit à la portabilité</strong> : exportez vos données en ZIP (JSON + PDF) depuis la fonctionnalité Export de l'application</li>
+      <li><strong>Droit d'opposition</strong> : IRIS est entièrement optionnel — vous pouvez ne jamais l'utiliser</li>
+    </ul>
+    <p>Pour toute question relative à vos achats in-app, contactez directement le support Apple ou Google Play.</p>
+    <p>Pour toute demande relative à vos droits : <a href="mailto:support@flowforges.fr">support@flowforges.fr</a></p>
+
+    <h2>9. Modifications</h2>
+    <p>Cette politique peut être mise à jour. La date de mise à jour est toujours indiquée en haut de cette page. Les changements significatifs seront signalés dans les notes de version de l'application.</p>
+
+    <h2>10. Contact</h2>
+    <p>FlowForges — France<br>
+    <a href="mailto:support@flowforges.fr">support@flowforges.fr</a></p>
+
+    <footer>
+      © 2026 FlowForges · PIVOT ·
+      <a href="terms.html">Conditions d'utilisation</a> ·
+      <a href="https://flowforges.fr/">Accueil</a>
+    </footer>
+  </div>
+</body>
+</html>

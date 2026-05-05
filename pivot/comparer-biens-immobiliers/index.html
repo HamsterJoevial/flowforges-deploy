@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment comparer plusieurs biens immobiliers efficacement ?</title>
+    <meta name="description" content="Méthode pour comparer objectivement plusieurs maisons ou appartements après vos visites. Critères, tableau comparatif et app mobile dédiée.">
+    <link rel="canonical" href="https://flowforges.fr/pivot/comparer-biens-immobiliers/">
+
+    <meta property="og:title" content="Comment comparer plusieurs biens immobiliers efficacement ?">
+    <meta property="og:description" content="Méthode pour comparer objectivement plusieurs biens après vos visites. Critères, outils et app dédiée.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://flowforges.fr/pivot/comparer-biens-immobiliers/">
+    <meta property="og:image" content="https://flowforges.fr/og-image.png">
+    <meta property="og:locale" content="fr_FR">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Comment comparer plusieurs biens immobiliers après vos visites ?",
+      "description": "Méthode et outils pour comparer objectivement plusieurs maisons ou appartements avant de faire une offre.",
+      "url": "https://flowforges.fr/pivot/comparer-biens-immobiliers/",
+      "publisher": { "@type": "Organization", "name": "FlowForges", "url": "https://flowforges.fr/" }
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #0D6E8A; --primary-light: #1A8FAD; --primary-dark: #095672;
+            --primary-bg: #E8F5F9; --accent: #D4A843;
+            --surface: #F6F7FA; --surface-card: #FFFFFF;
+            --text: #0D1320; --text-secondary: #5A6577; --text-muted: #9BA5B4;
+            --border: #D8DCE4; --radius: 12px; --radius-lg: 20px;
+            --shadow: 0 1px 3px rgba(0,0,0,0.06);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--surface); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(246,247,250,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(216,220,228,0.6); }
+        .nav-inner { max-width: 800px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 58px; }
+        .nav-brand { font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 0.9rem; text-decoration: none; color: var(--text); display: flex; align-items: center; gap: 8px; }
+        .nav-mark { width: 28px; height: 28px; background: #358A9F; border-radius: 7px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 0.75rem; font-weight: 800; }
+        .nav-back { font-size: 0.82rem; color: var(--primary); text-decoration: none; font-weight: 600; }
+        .nav-back:hover { text-decoration: underline; }
+        .article-wrap { max-width: 800px; margin: 0 auto; padding: 5rem 2rem 3rem; }
+        .article-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; font-weight: 700; color: var(--accent); letter-spacing: 2px; text-transform: uppercase; }
+        .article-tag::before { content: '[ '; opacity: 0.4; } .article-tag::after { content: ' ]'; opacity: 0.4; }
+        h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); font-weight: 800; letter-spacing: -1px; line-height: 1.15; margin: 0.75rem 0 1rem; }
+        .article-intro { font-size: 1.05rem; color: var(--text-secondary); margin-bottom: 2.5rem; border-left: 3px solid var(--primary); padding-left: 1rem; }
+        h2 { font-size: 1.35rem; font-weight: 800; margin: 2.5rem 0 1rem; letter-spacing: -0.5px; }
+        p { margin-bottom: 1rem; font-size: 0.97rem; color: var(--text-secondary); }
+        ul { padding-left: 1.5rem; margin-bottom: 1rem; }
+        li { font-size: 0.97rem; color: var(--text-secondary); margin-bottom: 0.4rem; }
+        strong { color: var(--text); font-weight: 600; }
+        .criteres-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+        .critere-card { background: var(--surface-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 1.25rem; }
+        .critere-icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .critere-title { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .critere-items { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; }
+        .info-box { background: var(--primary-bg); border-left: 4px solid var(--primary); border-radius: 0 var(--radius) var(--radius) 0; padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+        .info-box p { color: var(--text); margin: 0; }
+    .related {
+      margin-top: 3rem;
+      padding: 1.5rem 1.75rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--primary);
+      border-radius: var(--radius);
+    }
+    .related-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin: 0 0 0.85rem;
+    }
+    .related-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .related-list li { color: var(--text); line-height: 1.5; }
+    .related-list a {
+      color: var(--text);
+      font-weight: 500;
+      font-size: 0.95rem;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
+    }
+    .related-list a:hover { color: var(--primary); border-bottom-color: var(--primary); text-decoration: none; }
+
+    .cta-box { background: linear-gradient(135deg, var(--primary-bg), #fff); border: 1px solid var(--primary); border-radius: var(--radius-lg); padding: 2rem; text-align: center; margin: 3rem 0; }
+        .cta-box h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 0.5rem; }
+        .cta-box p { font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 1.5rem; }
+        .store-btns { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
+        .store-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--primary); color: #fff; font-weight: 700; font-size: 0.9rem; padding: 11px 22px; border-radius: var(--radius); text-decoration: none; transition: background 0.2s; }
+        .store-btn:hover { background: var(--primary-dark); }
+        footer { text-align: center; padding: 2rem; border-top: 1px solid var(--border); font-size: 0.78rem; color: var(--text-muted); }
+        footer a { color: var(--text-muted); text-decoration: none; }
+        footer a:hover { color: var(--primary); }
+        @media (max-width: 640px) { .criteres-grid { grid-template-columns: 1fr; } }
+    </style>
+  <script defer src="https://umami.flowforges.fr/script.js" data-website-id="38464e9c-d761-4f60-9e5a-03b6f17fbb9d"></script>
+</head>
+<body>
+
+<nav>
+    <div class="nav-inner">
+        <a class="nav-brand" href="../../index.html"><div class="nav-mark">FF</div>FlowForges</a>
+        <a class="nav-back" href="../">← PIVOT</a>
+    </div>
+</nav>
+
+<div class="article-wrap">
+    <span class="article-tag">Aide à la décision</span>
+    <h1>Comment comparer plusieurs biens immobiliers après vos visites ?</h1>
+    <p class="article-intro">Vous avez visité plusieurs appartements ou maisons et vous devez choisir. Comment éviter de décider à l'instinct, de comparer des souvenirs flous ou de regretter votre choix 3 mois plus tard ? Voici une méthode structurée.</p>
+
+    <h2>Le problème : la mémoire sélective après les visites</h2>
+    <p>Après 4 ou 5 visites, les souvenirs se mélangent. On se rappelle des coups de cœur mais on oublie les défauts. On est impressionné par un parquet en chêne et on passe sous silence le DPE F. On se souvient vaguement que "celui de la rue Lepic avait un problème d'humidité" mais on ne sait plus lequel exactement.</p>
+    <p>La comparaison à l'instinct mène souvent à des décisions biaisées par l'ordre des visites (effet de primauté ou de récence), par l'émotion du moment ou par un détail esthétique qui masque des défauts structurels importants.</p>
+    <p>La solution est de comparer des données, pas des impressions.</p>
+
+    <h2>Les critères de comparaison essentiels</h2>
+    <p>Une comparaison objective repose sur des critères clairs, évalués de la même façon pour chaque bien. Voici les 4 grandes catégories :</p>
+
+    <div class="criteres-grid">
+        <div class="critere-card">
+            <div class="critere-icon">💰</div>
+            <div class="critere-title">Financier</div>
+            <div class="critere-items">Prix, prix/m², charges, taxe foncière, travaux estimés, DPE (coût chauffage)</div>
+        </div>
+        <div class="critere-card">
+            <div class="critere-icon">🏗️</div>
+            <div class="critere-title">État du bien</div>
+            <div class="critere-items">Structure, toiture, électricité, plomberie, isolation, présence d'amiante ou de plomb</div>
+        </div>
+        <div class="critere-card">
+            <div class="critere-icon">🌍</div>
+            <div class="critere-title">Emplacement</div>
+            <div class="critere-items">Transports, commerces, écoles, nuisances sonores, exposition, quartier</div>
+        </div>
+        <div class="critere-card">
+            <div class="critere-icon">📐</div>
+            <div class="critere-title">Habitabilité</div>
+            <div class="critere-items">Agencement, luminosité, rangements, extérieur (terrasse, jardin, cave), stationnement</div>
+        </div>
+    </div>
+
+    <h2>La méthode des critères pondérés</h2>
+    <p>Tous les critères n'ont pas le même poids selon vos priorités. La méthode des critères pondérés consiste à :</p>
+    <ul>
+        <li>Lister vos critères importants (10 à 15 maximum)</li>
+        <li>Attribuer un poids à chacun (de 1 à 3 selon l'importance)</li>
+        <li>Évaluer chaque bien sur chaque critère (note de 1 à 5)</li>
+        <li>Multiplier la note par le poids et additionner pour chaque bien</li>
+    </ul>
+    <p>Le résultat n'est pas une vérité absolue, mais il force à expliciter vos priorités et rend la comparaison visible.</p>
+
+    <div class="info-box">
+        <p><strong>Critères non négociables :</strong> Avant de noter, identifiez vos critères éliminatoires — ceux pour lesquels un bien insuffisant est automatiquement écarté, quelle que soit la note globale. Exemple : pas plus de 30 min de trajet pour le travail, DPE minimum D.</p>
+    </div>
+
+    <h2>Comment comparer quand on n'a pas les mêmes informations pour chaque bien ?</h2>
+    <p>C'est le problème le plus fréquent. On a photographié un bien mais pas l'autre. On a demandé le DPE pour l'un mais oublié pour l'autre. On se souvient des charges pour deux biens sur cinq.</p>
+    <p>La solution : documenter chaque visite de la même façon, avec la même structure. Cela signifie :</p>
+    <ul>
+        <li>Une photo par pièce, systématiquement, pour chaque bien</li>
+        <li>Les mêmes questions posées à chaque agent (charges, taxe foncière, sinistres passés)</li>
+        <li>La même checklist de diagnostics vérifiée à chaque visite</li>
+        <li>Une note globale et un verdict attribués immédiatement après chaque visite</li>
+    </ul>
+
+    <h2>Outils pour comparer plusieurs biens</h2>
+    <p><strong>Tableau Excel ou Google Sheets :</strong> L'option la plus flexible. Vous créez vos colonnes (un bien = une colonne), vos lignes (un critère = une ligne). Mais elle ne gère pas les photos et nécessite de ressaisir toutes vos observations après la visite.</p>
+    <p><strong>Notion :</strong> Bien pour structurer des notes détaillées, mais peu adapté à la prise de notes en mobilité pendant une visite, et la comparaison multi-biens reste laborieuse.</p>
+    <p><strong>App mobile dédiée :</strong> La solution la plus efficace pour capturer les informations en temps réel. PIVOT est conçu pour ça : on saisit pendant la visite (photos annotées, checklist, observations par pièce), et on accède ensuite à un récapitulatif par bien avec verdict et statut décisionnel.</p>
+
+    <h2>Les biais à éviter dans votre décision</h2>
+    <ul>
+        <li><strong>Le biais de récence :</strong> se souvenir surtout du dernier bien visité. Notez immédiatement après chaque visite pour éviter ça.</li>
+        <li><strong>Le coup de cœur émotionnel :</strong> aimer un bien pour un détail esthétique et ignorer ses défauts structurels.</li>
+        <li><strong>La pression du vendeur :</strong> "on a d'autres visites" est souvent un argument de vente. Ne précipitez pas votre décision.</li>
+        <li><strong>La fatigue décisionnelle :</strong> après 8 visites, on veut juste que ça se finisse. Faites des pauses entre les visites.</li>
+    </ul>
+    <aside class="related" aria-label="Articles liés">
+      <!-- related-block -->
+      <h2 class="related-title">Voir aussi</h2>
+      <ul class="related-list">
+        <li><a href="https://flowforges.fr/pivot/checklist-visite-maison/">Checklist visite maison</a></li>
+        <li><a href="https://flowforges.fr/pivot/documents-obligatoires-vente-immobiliere-liste/">Documents obligatoires pour une vente immobilière</a></li>
+        <li><a href="https://flowforges.fr/pivot/dpe-amiante-plomb-visite/">DPE, amiante, plomb</a></li>
+      </ul>
+    </aside>
+
+
+    <div class="cta-box">
+        <h3>Comparez vos biens avec PIVOT</h3>
+        <p>Documentez chaque visite de façon identique, attribuez un verdict par bien, exportez vos rapports en PDF — pour décider avec toutes les données en main.</p>
+        <div class="store-btns">
+            <a class="store-btn" data-umami-event="cta_app_store_click" href="https://apps.apple.com/app/pivot-visites-immobilieres/id6759809220">App Store →</a>
+            <a class="store-btn" data-umami-event="cta_play_store_click" href="https://play.google.com/store/apps/details?id=com.joffrey.pivot">Google Play →</a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 FlowForges &middot; <a href="../../index.html">Accueil</a> &middot; <a href="../">PIVOT</a> &middot; <a href="mailto:contact@flowforges.fr">Contact</a></p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Politique de confidentialité — VigieContrat</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      line-height: 1.7;
+      padding: 2rem 1rem;
+    }
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    header {
+      margin-bottom: 3rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #1e293b;
+    }
+    header a {
+      color: #60a5fa;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-top: 1rem;
+      color: #f1f5f9;
+    }
+    .updated {
+      color: #64748b;
+      font-size: 0.875rem;
+      margin-top: 0.5rem;
+    }
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #f1f5f9;
+      margin-top: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+    p { color: #cbd5e1; margin-bottom: 0.75rem; }
+    ul {
+      color: #cbd5e1;
+      padding-left: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+    ul li { margin-bottom: 0.4rem; }
+    .highlight {
+      background: #1e293b;
+      border-left: 3px solid #3b82f6;
+      padding: 1rem 1.25rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1.25rem 0;
+    }
+    .highlight p { margin: 0; color: #93c5fd; }
+    a { color: #60a5fa; }
+    footer {
+      margin-top: 4rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #1e293b;
+      color: #475569;
+      font-size: 0.875rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <a href="index.html">← VigieContrat</a>
+      <h1>Politique de confidentialité</h1>
+      <p class="updated">Dernière mise à jour : mars 2026</p>
+    </header>
+
+    <div class="highlight">
+      <p>VigieContrat est un outil d'aide à la lecture de contrats. Il ne fournit pas de conseil juridique. Les analyses produites sont indicatives et ne remplacent pas l'avis d'un professionnel du droit.</p>
+    </div>
+
+    <h2>1. Qui sommes-nous</h2>
+    <p>VigieContrat est édité par FlowForges, représenté par Joffrey Desforges. Pour toute question relative à vos données personnelles, contactez-nous à : <a href="mailto:contact@flowforges.fr">contact@flowforges.fr</a></p>
+
+    <h2>2. Données collectées</h2>
+    <p>Lors de l'utilisation de VigieContrat, nous collectons les données suivantes :</p>
+    <ul>
+      <li><strong>Données de compte :</strong> adresse e-mail, identifiant utilisateur (via Supabase Auth)</li>
+      <li><strong>Texte des contrats :</strong> le texte extrait par OCR de vos documents, transmis à notre service d'analyse</li>
+      <li><strong>Historique des analyses :</strong> les résultats d'analyse associés à votre compte</li>
+      <li><strong>Données de paiement :</strong> gérées exclusivement par RevenueCat et les stores (Google Play, App Store) — nous n'accédons pas à vos informations bancaires</li>
+      <li><strong>Coordonnées expéditeur (courrier de contestation) :</strong> nom, prénom, adresse postale et adresse e-mail, saisis volontairement pour préremplir le formulaire de courrier. Ces données sont stockées <strong>uniquement sur votre appareil</strong> (stockage chiffré local, FlutterSecureStorage) et ne sont jamais transmises à nos serveurs.</li>
+    </ul>
+
+    <h2>3. Pourquoi nous collectons ces données</h2>
+    <ul>
+      <li>Fournir le service d'analyse de contrats</li>
+      <li>Conserver votre historique d'analyses</li>
+      <li>Gérer votre abonnement (plan gratuit, Premium, B2B)</li>
+      <li>Améliorer la qualité de l'analyse</li>
+    </ul>
+
+    <h2>4. Comment nous protégeons vos données</h2>
+    <p>Les textes de vos contrats sont <strong>chiffrés en AES-256</strong> (pgcrypto) dans notre base de données. Seul vous pouvez accéder à vos analyses via votre compte authentifié.</p>
+    <p>Votre texte de contrat est transmis à l'API Claude (Anthropic) pour analyse. Anthropic traite ces données conformément à sa propre politique de confidentialité, disponible sur <a href="https://www.anthropic.com/privacy" target="_blank">anthropic.com/privacy</a>.</p>
+
+    <h2>5. Durée de conservation</h2>
+    <p>Vos analyses sont conservées pendant <strong>90 jours</strong> à compter de leur création, puis supprimées automatiquement de nos serveurs.</p>
+    <p>Les données de votre compte (e-mail, profil) sont conservées tant que votre compte est actif. En cas de suppression de compte depuis l'application, la suppression des données est effective dans un délai maximum de <strong>90 jours</strong> conformément à l'article 17 du RGPD.</p>
+    <p>Les textes de contrats transmis à Anthropic pour analyse ne sont pas conservés par Anthropic au-delà du temps nécessaire au traitement, conformément à leur politique de rétention.</p>
+
+    <h2>6. Vos droits (RGPD)</h2>
+    <p>Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez des droits suivants :</p>
+    <ul>
+      <li><strong>Accès :</strong> consulter les données que nous détenons sur vous</li>
+      <li><strong>Rectification :</strong> corriger des données inexactes</li>
+      <li><strong>Suppression :</strong> demander la suppression de votre compte et de toutes vos données</li>
+      <li><strong>Portabilité :</strong> recevoir vos données dans un format lisible</li>
+      <li><strong>Opposition :</strong> vous opposer à certains traitements</li>
+    </ul>
+    <p>Pour exercer ces droits, écrivez à : <a href="mailto:contact@flowforges.fr">contact@flowforges.fr</a></p>
+    <p>Vous pouvez également supprimer votre compte directement depuis l'application, ce qui déclenche la purge automatique de vos données.</p>
+
+    <h2>7. Partage des données et transferts internationaux</h2>
+    <p>Nous ne vendons pas vos données. Nous partageons uniquement avec :</p>
+    <ul>
+      <li><strong>Supabase</strong> (hébergeur de base de données, UE) — stockage sécurisé de votre compte et de vos analyses</li>
+      <li><strong>Anthropic / Claude API</strong> (États-Unis) — le texte de vos contrats est transmis pour analyse, puis supprimé conformément à leur politique. Votre identifiant utilisateur n'est pas transmis à Anthropic.</li>
+      <li><strong>RevenueCat</strong> (États-Unis) — gestion des abonnements. Votre identifiant utilisateur Supabase (UUID anonyme, non lié à votre e-mail) est partagé avec RevenueCat pour associer votre abonnement à votre compte. Aucune donnée de contrat n'est transmise.</li>
+      <li><strong>Google / Apple</strong> — via les stores pour la distribution et la facturation</li>
+    </ul>
+    <p>Anthropic et RevenueCat sont des prestataires établis aux États-Unis. Ces transferts hors de l'Union Européenne sont encadrés par des clauses contractuelles types (Standard Contractual Clauses) conformément à l'article 46 du RGPD.</p>
+
+    <h2>8. Cookies et traceurs</h2>
+    <p>L'application mobile VigieContrat n'utilise pas de cookies. Elle utilise le stockage local de l'appareil pour maintenir votre session.</p>
+
+    <h2>9. Modifications</h2>
+    <p>Cette politique peut être mise à jour. En cas de changement significatif, vous serez notifié via l'application. La date de mise à jour est toujours indiquée en haut de cette page.</p>
+
+    <h2>10. Contact</h2>
+    <p>Pour toute question : <a href="mailto:contact@flowforges.fr">contact@flowforges.fr</a></p>
+    <p>FlowForges — France</p>
+
+    <footer>
+      © 2026 FlowForges · VigieContrat · <a href="index.html">Accueil</a>
+    </footer>
+  </div>
+</body>
+</html>
