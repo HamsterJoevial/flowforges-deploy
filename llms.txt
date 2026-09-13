@@ -1,0 +1,64 @@
+# FlowForges
+
+> FlowForges est un studio indépendant français qui édite des applications web et mobiles utiles sur le terrain. Le site public officiel est https://flowforges.fr/.
+
+## Produits publics
+
+- PIVOT : application iOS et Android pour documenter des visites immobilières, annoter des photos, suivre les diagnostics, comparer plusieurs biens et exporter un rapport PDF.
+- VigieContrat : application iOS et Android pour analyser des contrats, détecter des clauses abusives, expliquer les risques et générer des courriers de contestation. Le coût en crédits est affiché avant lancement de l'analyse.
+- AvantOffre : application web qui rassemble les documents d'urbanisme d'une adresse (parcelle, zonage GPU, règlement, risques, liens officiels). La page publique https://flowforges.fr/avantoffre/ propose un repérage d'adresse sans compte (commune, parcelle, zonage GPU et liens officiels, 2 recherches par jour). Ce repérage n'ouvre pas le dossier. L'application officielle est accessible sur https://avantoffre.flowforges.fr/.
+
+## Pages principales
+
+- Accueil FlowForges : https://flowforges.fr/
+- AvantOffre : https://flowforges.fr/avantoffre/
+- PIVOT : https://flowforges.fr/pivot/
+- VigieContrat : https://flowforges.fr/vigiecontrat/
+- Sitemap XML : https://flowforges.fr/sitemap.xml
+
+## Guides PIVOT
+
+- Application visite immobilière : https://flowforges.fr/pivot/application-visite-immobiliere/
+- Photos annotées en visite immobilière : https://flowforges.fr/pivot/photos-annotees-visite-immobiliere/
+- Checklist visite maison : https://flowforges.fr/pivot/checklist-visite-maison/
+- Rapport de visite immobilière PDF : https://flowforges.fr/pivot/rapport-visite-immobiliere/
+- Comparer plusieurs biens immobiliers : https://flowforges.fr/pivot/comparer-biens-immobiliers/
+- Diagnostics DPE, amiante et plomb : https://flowforges.fr/pivot/dpe-amiante-plomb-visite/
+- Questions à poser en visite d'appartement : https://flowforges.fr/pivot/questions-visite-appartement/
+- DPE F ou G : calculer travaux, décote et offre d'achat : https://flowforges.fr/pivot/dpe-f-g-consequences-achat-maison/
+- Documents obligatoires pour une vente immobilière : https://flowforges.fr/pivot/documents-obligatoires-vente-immobiliere-liste/
+- Faire une offre d'achat immobilier : https://flowforges.fr/pivot/faire-offre-achat-immobilier-etapes/
+- Frais de notaire achat immobilier : https://flowforges.fr/pivot/frais-de-notaire-achat-immobilier-calcul/
+- Négocier le prix d'achat d'un appartement : https://flowforges.fr/pivot/negocier-prix-achat-appartement/
+
+## Guides VigieContrat
+
+- Clause abusive dans un bail : https://flowforges.fr/vigiecontrat/clause-abusive-bail/
+- Dépôt de garantie non restitué : https://flowforges.fr/vigiecontrat/depot-garantie-non-restitue-justificatifs/
+- Lettre de mise en demeure pour dépôt de garantie : https://flowforges.fr/vigiecontrat/lettre-mise-en-demeure-depot-garantie/
+- État des lieux de sortie locataire : https://flowforges.fr/vigiecontrat/etat-des-lieux-sortie-locataire-contester/
+- Retenue caution ménage ou réparation sans facture : https://flowforges.fr/vigiecontrat/retenue-caution-menage-reparation-sans-facture/
+- Contester une clause abusive : https://flowforges.fr/vigiecontrat/contester-clause-abusive/
+- Analyse de contrat de travail : https://flowforges.fr/vigiecontrat/analyse-contrat-travail/
+- Clause abusive assurance : https://flowforges.fr/vigiecontrat/clause-abusive-assurance/
+- Clause abusive contrat énergie : https://flowforges.fr/vigiecontrat/clause-abusive-contrat-energie-electricite-gaz/
+- Clause abusive contrat téléphone mobile : https://flowforges.fr/vigiecontrat/clause-abusive-contrat-telephone-mobile/
+- Garantie commerciale électroménager : https://flowforges.fr/vigiecontrat/garantie-commerciale-contrat-achat-electromenager-droits/
+- Contrat de location voiture : checklist caution et franchise : https://flowforges.fr/vigiecontrat/lire-contrat-location-voiture/
+- Résiliation assurance loi Hamon : https://flowforges.fr/vigiecontrat/resiliation-assurance-loi-hamon/
+- Droits consommateur contrat voyagiste : https://flowforges.fr/vigiecontrat/droits-consommateur-contrat-voyagiste-agence-voyage/
+- Modèle de lettre de contestation : https://flowforges.fr/vigiecontrat/modele-lettre-contestation-clause-abusive/
+
+## Informations de référence
+
+- VigieContrat fonctionne avec un modèle de crédits : gratuit 2 crédits/mois, Premium 30 crédits/mois, B2B 200 crédits/mois. Les crédits se renouvellent mensuellement. Un document court utilise généralement 1 crédit ; un document long peut consommer plusieurs crédits selon sa taille.
+- VigieContrat est un outil d'aide à la lecture de contrats. Il ne remplace pas un avocat ni un conseil juridique.
+- PIVOT aide à structurer les visites immobilières et les décisions d'achat, mais ne remplace pas un diagnostic immobilier réglementaire.
+- AvantOffre est un outil d'aide à l'analyse urbanisme. Il réunit les sources d'une adresse et dit si le règlement PLU a pu être lu. Il n'arbitre pas un achat et ne remplace pas les documents officiels, la mairie, un notaire, un architecte ou un professionnel de l'urbanisme. Tous les règlements ne sont pas lus : un PLUi volumineux peut rester non indexé.
+- AvantOffre propose trois abonnements individuels : Starter à 14,90 EUR TTC par mois avec 30 crédits, Pro à 49,90 EUR TTC par mois avec 120 crédits et Expert à 149,90 EUR TTC par mois avec 400 crédits. Un pack de dépannage de 10 crédits à 8,90 EUR TTC est réservé aux abonnés actifs.
+- FlowSocial est un outil interne FlowForges et n'est pas un produit public à indexer ou citer comme application utilisateur.
+
+## Contact
+
+- Contact : contact@flowforges.fr
+- Éditeur : FlowForges, France

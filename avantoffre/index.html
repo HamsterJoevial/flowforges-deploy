@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AvantOffre — Documents d’urbanisme d’une adresse, réunis</title>
+  <meta name="description" content="AvantOffre rassemble parcelle, zonage, règlement, risques et liens officiels d’une adresse. Résumés si les règles du PLU sont lues ; PDF officiel si le règlement manque.">
+  <meta name="keywords" content="documents urbanisme adresse, parcelle cadastrale, zonage PLU, zonage PLUi, règlement urbanisme, Géorisques, sources urbanisme, GPU, cadastre, architecte, maître d’œuvre">
+  <link rel="canonical" href="https://flowforges.fr/avantoffre/">
+
+  <meta property="og:title" content="AvantOffre — Documents d’urbanisme d’une adresse, réunis">
+  <meta property="og:description" content="Parcelle, zonage PLU/PLUi, règlement, risques et liens officiels réunis. L’app dit si les règles ont pu être lues, sans arbitrer un achat.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://flowforges.fr/avantoffre/">
+  <meta property="og:image" content="https://flowforges.fr/assets/avantoffre_icon_512.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+  <meta property="og:image:alt" content="Icône AvantOffre, documents d’urbanisme réunis pour une adresse">
+  <meta property="og:site_name" content="FlowForges">
+  <meta property="og:locale" content="fr_FR">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="AvantOffre — Documents d’urbanisme d’une adresse, réunis">
+  <meta name="twitter:description" content="Parcelle, zonage PLU/PLUi, règlement, risques et liens officiels réunis. L’app dit si les règles ont pu être lues, sans arbitrer un achat.">
+  <meta name="twitter:image" content="https://flowforges.fr/assets/avantoffre_icon_512.png">
+  <meta name="twitter:image:alt" content="Icône AvantOffre, documents d’urbanisme réunis pour une adresse">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "AvantOffre",
+    "description": "AvantOffre rassemble les documents d'urbanisme d'une adresse : parcelle, zonage GPU, règlement, risques et liens officiels. Quand le règlement PLU a pu être lu, l'application retrouve des résumés des points utiles. Quand une source manque, elle le dit clairement. Aide à l'analyse : les documents officiels, la mairie, le notaire, l'architecte ou l'urbaniste font foi.",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "url": "https://flowforges.fr/avantoffre/",
+    "offers": [
+      {
+        "@type": "Offer",
+        "price": "14.90",
+        "priceCurrency": "EUR",
+        "description": "Starter — 30 crédits mensuels"
+      },
+      {
+        "@type": "Offer",
+        "price": "49.90",
+        "priceCurrency": "EUR",
+        "description": "Pro — 120 crédits mensuels"
+      },
+      {
+        "@type": "Offer",
+        "price": "149.90",
+        "priceCurrency": "EUR",
+        "description": "Expert — 400 crédits mensuels"
+      }
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "FlowForges",
+      "url": "https://flowforges.fr/"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "À quoi sert AvantOffre ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AvantOffre réunit en un seul point les documents d’urbanisme d’une adresse : parcelle, zonage GPU, règlement, risques et liens officiels. Quand le règlement PLU a pu être lu, il retrouve des résumés des points utiles. Quand une source manque, il le dit clairement. Il n’arbitre pas un achat."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Que retrouve-t-on sans compte sur cette page ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Un repérage seulement : commune, parcelle, zonage GPU et liens vers les sites officiels, dans la limite de 2 recherches par jour. Cette page n’ouvre pas le règlement, ni les résumés, ni le dossier. Les liens Cadastre, Géoportail, GPU et Géorisques ouvrent les sites publics : ils ne reprennent pas toujours l’adresse. Le dossier urbanisme s’ouvre dans l’app, avec un compte."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Est-ce seulement fait pour acheter un bien ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Non. Le nom ne réduit pas l’outil à « avant d’acheter ». Dès qu’il y a une adresse en France et des sources à voir, l’app peut servir : particulier, agent, chasseur, marchand, architecte ou maître d’œuvre."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "AvantOffre peut-il aider un architecte ou un maître d’œuvre ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui. L’intérêt est d’accéder vite au dossier urbanisme d’une adresse, sans ouvrir Géoportail, Cadastre, GPU, PDF et Géorisques un par un. L’outil ne remplace pas l’analyse professionnelle."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "AvantOffre indique-t-il les risques Géorisques d’une parcelle ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AvantOffre oriente vers le rapport Géorisques à l’adresse ou à la parcelle quand la source est disponible. Les risques affichés restent à vérifier dans les sources officielles, notamment lorsque l’information est communale ou documentaire."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "AvantOffre lit-il les documents PLU et PLUi ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Quand le règlement PLU a pu être lu, AvantOffre retrouve des résumés ciblés : hauteur, implantation, emprise, stationnement, destinations, patrimoine ou risques. Tous les règlements ne sont pas lus. Un PLUi trop volumineux peut rester non indexé : l’app affiche alors « Règlement de zone non lu », le PDF officiel, et un bouton pour demander l’indexation manuelle, sans délai promis. La lecture humaine reste nécessaire."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Que se passe-t-il si le règlement n’est pas lu ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "L’analyse peut tout de même réunir parcelle, zonage et liens. Une tuile indique « Règlement de zone non lu ». Vous gardez le lien vers le PDF officiel et pouvez demander l’indexation de ce règlement. L’indexation est manuelle. Aucun délai n’est promis."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Peut-on télécharger un rapport AvantOffre ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oui. Lorsqu’une analyse produit un rapport exploitable, l’utilisateur peut télécharger un rapport sourcé avec les liens, les limites et l’état des sources. AvantOffre ne conserve pas le rapport complet comme un espace de stockage documentaire."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "AvantOffre garantit-il une autorisation ou un permis ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Non. AvantOffre est un outil d’aide à l’analyse. Il n’arbitre pas un achat, ne donne pas de permis et ne dit pas qu’un projet est autorisé à coup sûr. Les documents officiels, la mairie, le notaire, l’architecte ou l’urbaniste font foi."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Comment fonctionnent les crédits ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Le repérage d’adresse sur cette page est sans compte et sans crédits. Un compte gratuit reçoit 10 crédits à l’inscription, valables 30 jours, pour tester une première adresse dans l’app. Ensuite un abonnement (Starter, Pro ou Expert) est nécessaire. Le coût en crédits s’affiche avant chaque lancement : une adresse peut en consommer plus ou moins selon les sources. Ce cadeau n’est pas le pack Dépannage à 8,90 € (10 crédits, 365 jours, abonnés)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Pourquoi certaines analyses peuvent-elles être incomplètes ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Les documents d’urbanisme français sont hétérogènes : scans, libellés différents, annexes, plans graphiques, PLUi de plusieurs milliers de pages. AvantOffre n’invente pas une lecture. Si le règlement n’a pas pu être lu, il le dit et pointe vers le PDF officiel."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #13795B;
+      --primary-dark: #0E5F47;
+      --primary-light: #EAF7F1;
+      --accent: #D99A28;
+      --accent-light: #FFF7E6;
+      --bg: #F7F8F5;
+      --surface: #FFFFFF;
+      --text: #121814;
+      --text-secondary: #59645D;
+      --text-tertiary: #879189;
+      --border: #DCE3DD;
+      --border-light: #E9EEE9;
+      --radius: 12px;
+      --radius-lg: 20px;
+      --shadow-sm: 0 1px 3px rgba(18,24,20,0.06);
+      --shadow-md: 0 5px 18px rgba(18,24,20,0.09);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(247,248,245,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-light);
+    }
+    .nav-inner {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-brand, .nav-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .nav-back {
+      color: var(--text-secondary);
+      font-size: 0.86rem;
+      font-weight: 600;
+    }
+    .nav-mark {
+      width: 32px;
+      height: 32px;
+      border-radius: 9px;
+      overflow: hidden;
+      background: var(--surface);
+      box-shadow: var(--shadow-sm);
+    }
+    .nav-mark img { width: 100%; height: 100%; display: block; }
+    .hero {
+      padding: 96px 24px 48px;
+      background: linear-gradient(180deg, var(--primary-light) 0%, var(--bg) 68%);
+      text-align: center;
+    }
+    .hero-icon {
+      width: 88px;
+      height: 88px;
+      border-radius: 24px;
+      margin: 0 auto 28px;
+      background: var(--surface);
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+    }
+    .hero-icon img { width: 100%; height: 100%; display: block; }
+    .eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--primary);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    h1 {
+      max-width: 820px;
+      margin: 0 auto 16px;
+      font-size: clamp(1.85rem, 4.5vw, 3.2rem);
+      line-height: 1.08;
+      letter-spacing: -1.2px;
+      font-weight: 800;
+    }
+    h1 em { color: var(--primary); font-style: normal; }
+    .hero-sub {
+      max-width: 670px;
+      margin: 0 auto 32px;
+      color: var(--text-secondary);
+      font-size: clamp(1rem, 2vw, 1.16rem);
+    }
+    .cta-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 12px 20px;
+      border-radius: var(--radius);
+      font-weight: 800;
+      text-decoration: none;
+      border: 1px solid transparent;
+    }
+    .btn-primary { background: var(--primary); color: #fff; }
+    .btn-primary:hover { background: var(--primary-dark); }
+    .btn-secondary { background: var(--surface); color: var(--primary); border-color: rgba(19,121,91,0.28); }
+    .hero-credits {
+      max-width: 640px;
+      margin: 0 auto 22px;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+    .hero-credits strong { color: var(--primary); font-weight: 700; }
+    .hero-note {
+      color: var(--text-tertiary);
+      font-size: 0.86rem;
+    }
+    .legal-links {
+      margin-top: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      color: var(--text-tertiary);
+      font-size: 0.82rem;
+    }
+    .legal-links a { color: var(--text-secondary); }
+    .section {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 56px 24px;
+    }
+    .section-head {
+      max-width: 700px;
+      margin-bottom: 24px;
+    }
+    .section-label {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: clamp(1.7rem, 4vw, 2.5rem);
+      line-height: 1.12;
+      margin-bottom: 12px;
+      letter-spacing: -0.8px;
+    }
+    .section-head p, .card p, .notice p {
+      color: var(--text-secondary);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      counter-reset: step;
+    }
+    .step {
+      background: var(--surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+      counter-increment: step;
+    }
+    .step::before {
+      content: counter(step);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      margin-bottom: 14px;
+      border-radius: 999px;
+      background: var(--primary-light);
+      color: var(--primary);
+      font-weight: 800;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+    }
+    .card strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1.05rem;
+    }
+    .card .metric {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--primary);
+      font-size: 0.78rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+    .audience-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .audience-list li {
+      list-style: none;
+      background: rgba(255,255,255,0.74);
+      border: 1px solid rgba(19,121,91,0.16);
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      color: var(--text-secondary);
+    }
+    .audience-list strong {
+      display: block;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .notice {
+      background: var(--accent-light);
+      border: 1px solid rgba(217,154,40,0.34);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+    }
+    .faq {
+      display: grid;
+      gap: 12px;
+    }
+    details {
+      background: var(--surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      box-shadow: var(--shadow-sm);
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 800;
+    }
+    details p {
+      margin-top: 10px;
+      color: var(--text-secondary);
+    }
+    .pricing {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 14px;
+    }
+    .price {
+      background: var(--surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 22px;
+    }
+    .price strong { display: block; font-size: 1.1rem; }
+    .price b { display: block; font-size: 1.7rem; margin: 10px 0 4px; }
+    .price span { color: var(--text-secondary); font-size: 0.9rem; }
+    .pricing-welcome {
+      max-width: 700px;
+      margin: 0 0 18px;
+      padding: 16px 18px;
+      background: var(--primary-light);
+      border: 1px solid rgba(19,121,91,0.22);
+      border-radius: var(--radius);
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+    .price-addon {
+      background: var(--bg);
+      border-style: dashed;
+    }
+    .guide-link {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .guide-link:hover {
+      transform: translateY(-2px);
+      border-color: rgba(19, 121, 91, 0.35);
+      box-shadow: 0 10px 30px rgba(18, 24, 20, 0.08);
+      text-decoration: none;
+    }
+    .guide-link span { color: var(--primary); font-weight: 700; }
+    footer {
+      padding: 32px 24px;
+      border-top: 1px solid var(--border-light);
+      color: var(--text-tertiary);
+      font-size: 0.82rem;
+      text-align: center;
+    }
+    footer a { color: var(--text-tertiary); text-decoration: none; }
+    .precheck {
+      max-width: 640px;
+      margin: 28px auto 22px;
+      text-align: left;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 18px 18px 16px;
+      box-shadow: var(--shadow-sm);
+    }
+    .precheck-title {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--primary);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .precheck-lead {
+      color: var(--text-secondary);
+      font-size: 0.92rem;
+      margin-bottom: 12px;
+    }
+    .precheck label {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .precheck-field { position: relative; }
+    .precheck input[type="text"] {
+      width: 100%;
+      min-height: 48px;
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font: inherit;
+      background: var(--surface);
+    }
+    .precheck-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .precheck-suggestions {
+      list-style: none;
+      position: absolute;
+      left: 0; right: 0;
+      z-index: 5;
+      margin-top: 4px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+    }
+    .precheck-suggestions button {
+      width: 100%;
+      text-align: left;
+      padding: 10px 14px;
+      border: 0;
+      background: transparent;
+      font: inherit;
+      cursor: pointer;
+    }
+    .precheck-suggestions button:hover,
+    .precheck-suggestions button:focus {
+      background: var(--primary-light);
+    }
+    .precheck-result {
+      max-width: 640px;
+      margin: 0 auto 22px;
+      text-align: left;
+      background: var(--surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      box-shadow: var(--shadow-sm);
+    }
+    .precheck-kicker {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--primary);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .precheck-result dl {
+      display: grid;
+      gap: 10px;
+      margin: 14px 0;
+    }
+    .precheck-result dt {
+      font-size: 0.78rem;
+      color: var(--text-tertiary);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .precheck-result dd { font-weight: 700; }
+    .precheck-address-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+    }
+    .precheck-copy {
+      border: 1px solid var(--border-light);
+      background: var(--surface);
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 0.82rem;
+      padding: 6px 10px;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+    .precheck-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 16px;
+      list-style: none;
+      margin: 0 0 14px;
+    }
+    .precheck-links a { color: var(--primary); font-weight: 700; }
+    .precheck-limit, .precheck-error {
+      color: var(--text-secondary);
+      font-size: 0.92rem;
+      margin-bottom: 14px;
+    }
+    @media (max-width: 680px) {
+      .nav-inner { padding: 0 16px; }
+      .hero { padding: 88px 18px 40px; }
+      .hero-icon {
+        width: 64px;
+        height: 64px;
+        border-radius: 18px;
+        margin-bottom: 18px;
+      }
+      .eyebrow { margin-bottom: 12px; }
+      h1 {
+        font-size: 2.18rem;
+        letter-spacing: -1px;
+        margin-bottom: 16px;
+      }
+      .hero-sub {
+        font-size: 1rem;
+        margin-bottom: 22px;
+      }
+      .cta-row { margin-bottom: 12px; }
+      .hero-credits {
+        font-size: 0.9rem;
+        margin-bottom: 16px;
+      }
+    }
+  </style>
+  <script defer src="https://umami.flowforges.fr/script.js" data-website-id="38464e9c-d761-4f60-9e5a-03b6f17fbb9d"></script>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-brand" href="/">
+      <span class="nav-mark"><img src="/assets/avantoffre_icon.svg" alt="AvantOffre"></span>
+      AvantOffre
+    </a>
+    <a class="nav-back" href="/">FlowForges</a>
+  </div>
+</nav>
+
+<main>
+  <section class="hero">
+    <div class="hero-icon"><img src="/assets/avantoffre_icon.svg" alt=""></div>
+    <p class="eyebrow">Documents d’urbanisme</p>
+    <h1>Les sources d’une adresse, <em>réunies au même endroit</em></h1>
+    <p class="hero-sub">AvantOffre réunit parcelle, zonage, règlement, risques et liens officiels. Quand les règles du PLU ont pu être lues, les points utiles sont résumés. Sinon, l’app le dit, avec le PDF officiel.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" data-umami-event="avantoffre_account_click" href="https://avantoffre.flowforges.fr/account?next=/">Ouvrir le dossier dans l’app</a>
+      <a class="btn btn-secondary" data-umami-event="avantoffre_pricing_click" href="https://avantoffre.flowforges.fr/pricing">Voir les tarifs</a>
+    </div>
+    <p class="hero-credits">Compte gratuit : <strong>10 crédits offerts</strong> à l’inscription, valables 30 jours, pour tester une première adresse dans l’app. Ensuite un abonnement. Le coût s’affiche avant chaque lancement.</p>
+    <form id="avantoffre-precheck" class="precheck" action="https://avantoffre.flowforges.fr/account" method="get">
+      <p class="precheck-title">Repérage d’adresse</p>
+      <p class="precheck-lead">Gratuit, 2 fois par jour. Ici : commune, parcelle, zonage et liens. Pas le règlement, pas les résumés, pas le dossier.</p>
+      <label for="precheck-address">Adresse en France</label>
+      <div class="precheck-field">
+        <input id="precheck-address" name="address" type="text" autocomplete="street-address" required minlength="5" placeholder="Place de l’Hôtel de Ville 75004 Paris">
+        <ul id="precheck-suggestions" class="precheck-suggestions" hidden></ul>
+      </div>
+      <div class="precheck-actions">
+        <button id="precheck-submit" class="btn btn-secondary" type="submit" data-umami-event="avantoffre_precheck_submit">Repérer parcelle et zonage</button>
+      </div>
+    </form>
+    <div id="precheck-result" class="precheck-result" hidden aria-live="polite"></div>
+	    <p class="hero-note">Aide à l’analyse, indicative et sourcée. Les documents officiels, la mairie, le notaire, l’architecte ou l’urbaniste font foi. Le repérage sans compte est limité à 2 adresses par jour : commune, parcelle, zonage et liens. Le dossier s’ouvre dans l’app.</p>
+	    <div class="legal-links" aria-label="Liens légaux AvantOffre">
+	      <a href="/mentions-legales/">Mentions légales</a>
+	      <span>·</span>
+	      <a href="/privacy/">Confidentialité</a>
+	      <span>·</span>
+	      <a href="/terms/">Conditions</a>
+	    </div>
+	  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <p class="section-label">Ce que l’app rassemble</p>
+      <h2>Un seul point d’accès, à la place de cinq portails.</h2>
+      <p>Géoportail, Cadastre, GPU, PDF de règlement, Géorisques : AvantOffre les réunit autour d’une adresse. Le but n’est pas de dire si vous achetez. Le but est d’avoir les sources sous la main, et de savoir si elles ont pu être lues.</p>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <span class="metric">Adresse</span>
+        <strong>Parcelle et zonage</strong>
+        <p>Recherche de l’adresse, parcelles candidates, zonage GPU et surface indicative quand les données disponibles le permettent.</p>
+      </article>
+      <article class="card">
+        <span class="metric">PLU / PLUi</span>
+        <strong>Résumés si les règles sont lues</strong>
+        <p>Quand le règlement PLU a pu être lu : hauteur, implantation, stationnement, destinations, emprise et autres points utiles, avec leurs sources.</p>
+      </article>
+      <article class="card">
+        <span class="metric">Risques</span>
+        <strong>Liens officiels</strong>
+        <p>Accès direct vers Géorisques, Atlas des patrimoines, cadastre, GPU et règlement PDF, sans les chercher un par un.</p>
+      </article>
+      <article class="card">
+        <span class="metric">État des sources</span>
+        <strong>Lu, ou clairement non lu</strong>
+        <p>Si le règlement manque, l’app l’affiche, donne le PDF officiel et permet de demander une indexation manuelle. Aucun délai n’est promis. Tous les règlements ne sont pas encore lus.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <p class="section-label">Utilisateurs terrain</p>
+      <h2>Dès qu’il y a une adresse à documenter.</h2>
+      <p>Particulier, agent, chasseur, marchand, architecte ou maître d’œuvre : la question est « j’ai une adresse en France, je dois voir ces sources ». Pas seulement « avant une offre d’achat ».</p>
+    </div>
+    <ul class="audience-list">
+      <li><strong>Architectes et maîtres d’œuvre</strong>Accéder vite au dossier urbanisme d’une adresse, sans ouvrir chaque portail un par un.</li>
+      <li><strong>Agents, chasseurs et marchands de biens</strong>Réunir parcelle, zonage, risques et règlement au même endroit pour un dossier.</li>
+      <li><strong>Particuliers et porteurs de projet</strong>Les documents d’une adresse, réunis. Si les règles du PLU n’ont pas pu être lues, l’app le dit.</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <p class="section-label">Sur le terrain</p>
+      <h2>Les mêmes sources, quel que soit le motif.</h2>
+      <p>AvantOffre n’arbitre pas un achat. C’est un raccourci vers les documents, pour ne plus les chercher à l’aveugle dans les portails, les PDF et les annexes.</p>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <span class="metric">Mission</span>
+        <strong>Préparer un rendez-vous</strong>
+        <p>Parcelle, zonage, liens officiels et, si le règlement a pu être lu, les articles utiles — avant d’ouvrir cinq sites différents.</p>
+      </article>
+      <article class="card">
+        <span class="metric">Règles lues</span>
+        <strong>Retrouver les points utiles</strong>
+        <p>Hauteur, implantation, stationnement, destinations, emprise : des résumés sourcés quand le règlement PLU a pu être lu.</p>
+      </article>
+      <article class="card">
+        <span class="metric">Règles non lues</span>
+        <strong>Règlement de zone non lu</strong>
+        <p>L’app le dit. Vous gardez le PDF officiel et pouvez demander qu’il soit indexé. L’indexation est manuelle, sans délai promis.</p>
+      </article>
+      <article class="card">
+        <span class="metric">Suite humaine</span>
+        <strong>Arriver avec les sources</strong>
+        <p>Mairie, notaire, architecte ou urbaniste : les documents officiels font foi. AvantOffre sert à les avoir sous la main, pas à les remplacer.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <p class="section-label">Méthode</p>
+      <h2>Adresse, sources réunies, lecture honnête.</h2>
+    </div>
+    <div class="steps">
+      <article class="step">
+        <strong>Entrer une adresse</strong>
+        <p>L’app recherche la parcelle, le zonage et les sources publiques disponibles autour de l’adresse.</p>
+      </article>
+      <article class="step">
+        <strong>Voir ce qui a été réuni</strong>
+        <p>Sources réunies et lues, ou règlement de zone non lu : l’état est affiché. Les résumés n’apparaissent que si le règlement a pu être lu.</p>
+      </article>
+      <article class="step">
+        <strong>Ouvrir les documents</strong>
+        <p>Liens officiels, PDF, et rapport sourcé avec un compte : pour reprendre l’analyse sans repartir de zéro. Pas un permis.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="notice">
+      <p class="section-label">Limites assumées</p>
+      <h2>Une aide à l’analyse, pas un permis.</h2>
+      <p>AvantOffre ne dit pas « autorisé à coup sûr ». Il ne donne pas de permis. Les documents d’urbanisme varient fortement, et tous les règlements ne sont pas encore lus : un PLUi volumineux peut rester non indexé. L’app affiche alors le PDF officiel et permet de demander une indexation manuelle, sans promesse de délai. Les documents officiels, la mairie, le notaire, l’architecte ou l’urbaniste font foi.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <p class="section-label">Guides urbanisme</p>
+      <h2>Méthodes pour ouvrir les sources officielles.</h2>
+      <p>Deux guides pour retrouver PLU, parcelle et risques dans les portails publics. Ils ne remplacent pas l’analyse professionnelle.</p>
+    </div>
+    <div class="grid">
+      <a class="card guide-link" href="/avantoffre/verifier-plu-avant-achat-immobilier/">
+        <span class="metric">PLU / PLUi</span>
+        <strong>Vérifier le PLU avant un achat immobilier</strong>
+        <p>Parcelle, zonage, règlement, annexes et sources à ouvrir dans les portails publics.</p>
+        <span>Lire le guide →</span>
+      </a>
+      <a class="card guide-link" href="/avantoffre/risques-georisques-parcelle-avant-achat/">
+        <span class="metric">Géorisques</span>
+        <strong>Lire les risques à l’adresse ou à la parcelle</strong>
+        <p>Rapport Géorisques, ERRIAL, niveau de précision et questions à garder pour la suite.</p>
+        <span>Lire le guide →</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <p class="section-label">Questions fréquentes</p>
+      <h2>Ce qu’il faut savoir avant d’utiliser AvantOffre.</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>À quoi sert AvantOffre ?</summary>
+        <p>AvantOffre réunit en un seul point les documents d’urbanisme d’une adresse : parcelle, zonage GPU, règlement, risques et liens officiels. Quand le règlement PLU a pu être lu, il retrouve des résumés des points utiles. Quand une source manque, il le dit clairement. Il n’arbitre pas un achat.</p>
+      </details>
+      <details>
+        <summary>Que retrouve-t-on sans compte sur cette page ?</summary>
+        <p>Un repérage seulement : commune, parcelle, zonage GPU et liens vers les sites officiels, dans la limite de 2 recherches par jour. Cette page n’ouvre pas le règlement, ni les résumés, ni le dossier. Les liens Cadastre, Géoportail, GPU et Géorisques ouvrent les sites publics : ils ne reprennent pas toujours l’adresse. Le dossier urbanisme s’ouvre dans l’app, avec un compte.</p>
+      </details>
+      <details>
+        <summary>Est-ce seulement fait pour acheter un bien ?</summary>
+        <p>Non. Le nom ne réduit pas l’outil à « avant d’acheter ». Dès qu’il y a une adresse en France et des sources à voir, l’app peut servir : particulier, agent, chasseur, marchand, architecte ou maître d’œuvre.</p>
+      </details>
+      <details>
+        <summary>AvantOffre peut-il aider un architecte ou un maître d’œuvre ?</summary>
+        <p>Oui. L’intérêt est d’accéder vite au dossier urbanisme d’une adresse, sans ouvrir Géoportail, Cadastre, GPU, PDF et Géorisques un par un. L’outil ne remplace pas l’analyse professionnelle.</p>
+      </details>
+      <details>
+        <summary>AvantOffre indique-t-il les risques Géorisques d’une parcelle ?</summary>
+        <p>AvantOffre oriente vers le rapport Géorisques à l’adresse ou à la parcelle quand la source est disponible. Les risques affichés restent à vérifier dans les sources officielles, notamment lorsque l’information est communale ou documentaire.</p>
+      </details>
+      <details>
+        <summary>AvantOffre lit-il les documents PLU et PLUi ?</summary>
+        <p>Quand le règlement PLU a pu être lu, AvantOffre retrouve des résumés ciblés : hauteur, implantation, emprise, stationnement, destinations, patrimoine ou risques. Tous les règlements ne sont pas lus. Un PLUi trop volumineux peut rester non indexé : l’app affiche alors « Règlement de zone non lu », le PDF officiel, et un bouton pour demander l’indexation manuelle, sans délai promis. La lecture humaine reste nécessaire.</p>
+      </details>
+      <details>
+        <summary>Que se passe-t-il si le règlement n’est pas lu ?</summary>
+        <p>L’analyse peut tout de même réunir parcelle, zonage et liens. Une tuile indique « Règlement de zone non lu ». Vous gardez le lien vers le PDF officiel et pouvez demander l’indexation de ce règlement. L’indexation est manuelle. Aucun délai n’est promis.</p>
+      </details>
+      <details>
+        <summary>Peut-on télécharger un rapport AvantOffre ?</summary>
+        <p>Oui. Lorsqu’une analyse produit un rapport exploitable, l’utilisateur peut télécharger un rapport sourcé avec les liens, les limites et l’état des sources. AvantOffre ne conserve pas le rapport complet comme un espace de stockage documentaire.</p>
+      </details>
+      <details>
+        <summary>AvantOffre garantit-il une autorisation ou un permis ?</summary>
+        <p>Non. AvantOffre est un outil d’aide à l’analyse. Il n’arbitre pas un achat, ne donne pas de permis et ne dit pas qu’un projet est autorisé à coup sûr. Les documents officiels, la mairie, le notaire, l’architecte ou l’urbaniste font foi.</p>
+      </details>
+      <details>
+        <summary>Comment fonctionnent les crédits ?</summary>
+        <p>Le repérage d’adresse sur cette page est sans compte et sans crédits. Un compte gratuit reçoit 10 crédits à l’inscription, valables 30 jours, pour tester une première adresse dans l’app. Ensuite un abonnement (Starter, Pro ou Expert) est nécessaire. Le coût en crédits s’affiche avant chaque lancement : une adresse peut en consommer plus ou moins selon les sources. Ce cadeau n’est pas le pack Dépannage à 8,90 € (10 crédits, 365 jours, abonnés).</p>
+      </details>
+      <details>
+        <summary>Pourquoi certaines analyses peuvent-elles être incomplètes ?</summary>
+        <p>Les documents d’urbanisme français sont hétérogènes : scans, libellés différents, annexes, plans graphiques, PLUi de plusieurs milliers de pages. AvantOffre n’invente pas une lecture. Si le règlement n’a pas pu être lu, il le dit et pointe vers le PDF officiel.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <p class="section-label">Offre de lancement</p>
+      <h2>Crédits mensuels, sans plafond artificiel par analyse.</h2>
+      <p>Une analyse peut consommer plus ou moins de crédits selon les sources à lire. L’utilisateur garde la main : si son solde le permet, il peut accepter une analyse plus coûteuse.</p>
+    </div>
+    <p class="pricing-welcome">Le compte est gratuit. 10 crédits sont offerts à l’inscription pour tester une première adresse dans l’app, valables 30 jours. Ensuite Starter, Pro ou Expert. Le pack Dépannage à 8,90 € n’est pas ce cadeau : 10 crédits, 365 jours, réservé aux abonnés actifs.</p>
+    <div class="pricing">
+      <div class="price"><strong>Starter</strong><b>14,90 €/mois</b><span>30 crédits mensuels.</span></div>
+      <div class="price"><strong>Pro</strong><b>49,90 €/mois</b><span>120 crédits mensuels.</span></div>
+      <div class="price"><strong>Expert</strong><b>149,90 €/mois</b><span>400 crédits mensuels.</span></div>
+      <div class="price price-addon"><strong>Dépannage</strong><b>8,90 €</b><span>10 crédits valables 365 jours, réservés aux abonnés actifs. Pas le cadeau d’inscription.</span></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© 2026 FlowForges · <a href="/">Accueil</a> · <a href="/mentions-legales/">Mentions légales</a> · <a href="/privacy/">Confidentialité</a> · <a href="/terms/">Conditions</a> · <a href="mailto:contact@flowforges.fr">contact@flowforges.fr</a></p>
+</footer>
+<script src="/avantoffre/precheck.js" defer></script>
+
+</body>
+</html>

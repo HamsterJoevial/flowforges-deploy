@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">AvantOffre</title>
+  <desc id="desc">Icône AvantOffre, pré-check urbanisme avant offre immobilière</desc>
+  <defs>
+    <linearGradient id="g" x1="18" x2="110" y1="18" y2="110" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#13795B"/>
+      <stop offset="0.55" stop-color="#1B8F7A"/>
+      <stop offset="1" stop-color="#D99A28"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="#F4FBF8"/>
+  <path d="M64 16c18.8 0 34 15.2 34 34 0 24.3-34 62-34 62S30 74.3 30 50c0-18.8 15.2-34 34-34Z" fill="url(#g)"/>
+  <circle cx="64" cy="50" r="17" fill="#fff" opacity="0.96"/>
+  <path d="M52 76h24M48 88h32" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+  <path d="M57 50.5 62 56l11-13" fill="none" stroke="#13795B" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
