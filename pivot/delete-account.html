@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suppression des données — PIVOT</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      line-height: 1.7;
+      padding: 2rem 1rem;
+    }
+    .container { max-width: 780px; margin: 0 auto; }
+    header {
+      margin-bottom: 3rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #1e293b;
+    }
+    header a { color: #60a5fa; text-decoration: none; font-size: 0.9rem; }
+    h1 { font-size: 2rem; font-weight: 700; margin-top: 1rem; color: #f1f5f9; }
+    .updated { color: #64748b; font-size: 0.875rem; margin-top: 0.5rem; }
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #f1f5f9;
+      margin-top: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+    p { margin-bottom: 1rem; color: #cbd5e1; }
+    .card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 2rem 0;
+    }
+    .card h2 { margin-top: 0; }
+    .steps { list-style: none; counter-reset: step; }
+    .steps li {
+      counter-increment: step;
+      padding: 0.75rem 0 0.75rem 3rem;
+      position: relative;
+      border-bottom: 1px solid #1e293b;
+      color: #cbd5e1;
+    }
+    .steps li:last-child { border-bottom: none; }
+    .steps li::before {
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 0.75rem;
+      width: 28px;
+      height: 28px;
+      background: #0D6E8A;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 28px;
+      text-align: center;
+    }
+    .email-btn {
+      display: inline-block;
+      background: #0D6E8A;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      margin-top: 1.5rem;
+    }
+    .email-btn:hover { background: #095672; }
+    .note {
+      background: #1e293b;
+      border-left: 3px solid #0D6E8A;
+      padding: 1rem 1.25rem;
+      border-radius: 0 8px 8px 0;
+      margin-top: 2rem;
+      color: #94a3b8;
+      font-size: 0.9rem;
+    }
+    footer {
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid #1e293b;
+      color: #475569;
+      font-size: 0.85rem;
+    }
+    footer a { color: #60a5fa; text-decoration: none; }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <a href="../">← FlowForges</a>
+    <h1>Suppression des données</h1>
+    <p class="updated">Application PIVOT — Visites Immobilières</p>
+  </header>
+
+  <p>Conformément au RGPD et aux politiques Google Play, vous pouvez demander la suppression de toutes vos données associées à l'application PIVOT à tout moment.</p>
+
+  <div class="card">
+    <h2>Données stockées par PIVOT</h2>
+    <p>PIVOT est une application <strong>hors ligne</strong>. La quasi-totalité de vos données (visites, photos, notes) est stockée localement sur votre appareil et n'est jamais transmise à nos serveurs.</p>
+    <p>Les seules données que nous pouvons détenir sont :</p>
+    <ul style="margin-left:1.5rem; color:#cbd5e1;">
+      <li>Historique d'achat in-app (via Google Play)</li>
+      <li>Identifiant anonyme Firebase (App Check)</li>
+    </ul>
+  </div>
+
+  <h2>Supprimer vos données locales</h2>
+  <ol class="steps">
+    <li>Ouvrez l'application PIVOT sur votre appareil</li>
+    <li>Supprimez vos visites et données depuis l'interface de l'app</li>
+    <li>Désinstallez l'application — toutes les données locales sont effacées définitivement</li>
+  </ol>
+
+  <h2>Demander la suppression des données serveur</h2>
+  <p>Pour toute demande de suppression des données conservées côté serveur (historique d'achat, identifiant Firebase), contactez-nous par email. Nous traiterons votre demande dans un délai de 30 jours.</p>
+
+  <a class="email-btn" href="mailto:contact@flowforges.fr?subject=Suppression%20de%20mes%20données%20PIVOT">
+    ✉ Envoyer une demande de suppression
+  </a>
+
+  <div class="note">
+    Indiquez dans votre email l'identifiant de votre appareil ou votre adresse email associée à l'achat Google Play afin que nous puissions identifier vos données.
+  </div>
+
+  <footer>
+    <p>© 2026 FlowForges ·
+      <a href="privacy-policy.html">Politique de confidentialité</a> ·
+      <a href="terms.html">Conditions d'utilisation</a>
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>
