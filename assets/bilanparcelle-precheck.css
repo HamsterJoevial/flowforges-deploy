@@ -1,0 +1,206 @@
+/* Repérage gratuit BilanParcelle, intégré aux guides PLU.
+   Règles copiées de bilanparcelle/index.html (bloc <style>, sélecteurs .precheck*).
+   Variables déclarées ici car les guides n'ont pas la palette de la landing. */
+
+.precheck,
+.precheck-result {
+  --primary: #13795B;
+  --primary-dark: #0E5F47;
+  --primary-light: #EAF7F1;
+  --surface: #FFFFFF;
+  --text: #121814;
+  --text-secondary: #59645D;
+  --text-tertiary: #879189;
+  --border: #DCE3DD;
+  --border-light: #E9EEE9;
+  --radius: 12px;
+  --radius-lg: 20px;
+  --shadow-sm: 0 1px 3px rgba(18,24,20,0.06);
+  --shadow-md: 0 5px 18px rgba(18,24,20,0.09);
+}
+
+.precheck {
+  max-width: 640px;
+  margin: 28px auto 22px;
+  text-align: left;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 18px 18px 16px;
+  box-shadow: var(--shadow-sm);
+}
+.precheck-title {
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.precheck-lead {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  margin-bottom: 12px;
+}
+.precheck label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.precheck-field { position: relative; }
+.precheck input[type="text"] {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font: inherit;
+  background: var(--surface);
+}
+.precheck-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+.precheck-suggestions {
+  list-style: none;
+  position: absolute;
+  left: 0; right: 0;
+  z-index: 5;
+  margin-top: 4px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+.precheck-suggestions button {
+  width: 100%;
+  text-align: left;
+  padding: 10px 14px;
+  border: 0;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+}
+.precheck-suggestions button:hover,
+.precheck-suggestions button:focus {
+  background: var(--primary-light);
+}
+.precheck-result {
+  max-width: 640px;
+  margin: 0 auto 22px;
+  text-align: left;
+  background: var(--surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+}
+.precheck-kicker {
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.precheck-result dl {
+  display: grid;
+  gap: 10px;
+  margin: 14px 0;
+}
+.precheck-result dt {
+  font-size: 0.78rem;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.precheck-result dd { font-weight: 700; }
+.precheck-address-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+.precheck-copy {
+  border: 1px solid var(--border-light);
+  background: var(--surface);
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.82rem;
+  padding: 6px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.precheck-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  list-style: none;
+  margin: 0 0 14px;
+}
+.precheck-links a { color: var(--primary); font-weight: 700; }
+.precheck-limit, .precheck-error {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  margin-bottom: 14px;
+}
+
+/* Boutons générés par precheck.js et bouton du formulaire, limités au repérage */
+.precheck .btn,
+.precheck-result .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.7rem 1.1rem;
+  border: 1.5px solid transparent;
+  border-radius: var(--radius);
+  font: inherit;
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+.precheck .btn:hover,
+.precheck-result .btn:hover { text-decoration: none; }
+.precheck .btn-primary,
+.precheck-result .btn-primary {
+  background: #13795b;
+  border-color: #13795b;
+  color: #fff;
+}
+.precheck .btn-primary:hover,
+.precheck-result .btn-primary:hover { background: var(--primary-dark); border-color: var(--primary-dark); }
+.precheck .btn-secondary,
+.precheck-result .btn-secondary {
+  background: var(--surface);
+  color: var(--primary);
+  border-color: rgba(19,121,91,0.28);
+}
+.precheck .btn-secondary:hover,
+.precheck-result .btn-secondary:hover { border-color: var(--primary); }
+
+/* Bouton « Voir les tarifs » des blocs BilanParcelle : guide-app-box.css applique
+   le fond vert principal à ce bouton secondaire, ce qui rend le texte vert sur vert.
+   Fond transparent, contour et texte verts. */
+.app-promo.bilan .app-promo-actions a.btn.secondary {
+  background: transparent;
+  color: #13795b;
+  border: 1.5px solid #13795b;
+}
+
+/* Les guides ont des marges et puces globales : on les neutralise dans le repérage */
+.precheck-suggestions,
+.precheck-links {
+  padding-left: 0;
+}
+.precheck-suggestions li + li,
+.precheck-links li + li {
+  margin-top: 0;
+}

@@ -1,0 +1,113 @@
+.app-promo {
+  background: #f4f8fb;
+  border: 1px solid #d8dce4;
+  border-left: 4px solid #0d6e8a;
+  border-radius: 12px;
+  padding: 1.15rem 1.25rem;
+  margin: 1.5rem 0;
+}
+.app-promo.bilan {
+  background: #f3faf6;
+  border-left-color: #13795b;
+}
+.app-promo h2 {
+  font-size: 1.15rem;
+  line-height: 1.3;
+  margin: 0 0 0.45rem;
+}
+.app-promo p {
+  margin: 0 0 0.85rem;
+}
+.app-promo-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+  margin: 0;
+}
+.app-promo-actions a.btn {
+  display: inline-block;
+  background: #0d6e8a;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.55rem 0.95rem;
+  border-radius: 999px;
+}
+.app-promo.bilan .app-promo-actions a.btn {
+  background: #13795b;
+}
+.app-promo-actions a.btn.secondary {
+  background: transparent;
+  color: #0d6e8a;
+  border: 1.5px solid #0d6e8a;
+}
+.app-promo.bilan .app-promo-actions a.btn.secondary {
+  color: #13795b;
+  border-color: #13795b;
+}
+.app-promo-actions a.link {
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+.guide-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.92rem;
+}
+.guide-table th,
+.guide-table td {
+  border: 1px solid #d8dce4;
+  padding: 0.55rem 0.65rem;
+  text-align: left;
+  vertical-align: top;
+}
+.guide-table th {
+  background: #e8f5f9;
+}
+@media (max-width: 720px) {
+  .guide-table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
+.cross-promo {
+  box-sizing: border-box;
+  width: min(860px, calc(100% - 2rem));
+  margin: 0.25rem auto 2.5rem;
+  padding: 0.9rem 1.1rem;
+  background: #fff;
+  border: 1px solid #d8dce4;
+  border-radius: 12px;
+  color: #3d4654;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.cross-promo h2 {
+  margin: 0 0 0.35rem;
+  font-size: 1.02rem;
+  line-height: 1.35;
+  font-weight: 700;
+  letter-spacing: 0;
+  color: #0d1320;
+}
+.cross-promo p {
+  margin: 0 0 0.45rem;
+  color: #3d4654;
+}
+.cross-promo p:last-child { margin-bottom: 0; }
+.cross-promo a {
+  color: #0d6e8a;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+.cross-promo a:hover { color: #095672; }
+.cross-promo a:focus-visible {
+  outline: 2px solid #0d6e8a;
+  outline-offset: 3px;
+  border-radius: 2px;
+}

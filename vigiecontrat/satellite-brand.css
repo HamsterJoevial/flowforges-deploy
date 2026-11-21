@@ -1,0 +1,143 @@
+/* VigieContrat satellite brand layer */
+:root {
+  --primary: #C24419;
+  --primary-dark: #9C3310;
+  --primary-light: #FFF1EB;
+  --accent: #D4A843;
+  --accent-light: #FBF4E4;
+  --bg: #F6F7FA;
+  --surface: #FFFFFF;
+  --text: #0D1320;
+  --text-secondary: #5A6577;
+  --text-tertiary: #8B95A5;
+  --border: #D8DCE4;
+  --border-light: #E8EBF0;
+  --success: #3DAA6D;
+  --radius: 12px;
+  --radius-lg: 20px;
+  --shadow-sm: 0 1px 3px rgba(13,19,32,0.06);
+  --shadow-md: 0 4px 16px rgba(13,19,32,0.10);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(circle, var(--primary) 0.5px, transparent 0.5px);
+  background-size: 32px 32px;
+  opacity: 0.02;
+  pointer-events: none;
+  z-index: 0;
+}
+
+nav {
+  background: rgba(246,247,250,0.94);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.nav-inner {
+  min-height: 64px;
+}
+
+.brand {
+  color: var(--text);
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-weight: 800;
+}
+
+.brand-mark {
+  overflow: hidden;
+  background: transparent;
+  box-shadow: var(--shadow-sm);
+}
+
+.brand-mark img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nav-links {
+  color: var(--text-secondary);
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+header {
+  background:
+    radial-gradient(circle at 18% 0%, rgba(194,68,25,0.16), transparent 34%),
+    radial-gradient(circle at 84% 10%, rgba(212,168,67,0.18), transparent 38%),
+    linear-gradient(180deg, var(--primary-light) 0%, var(--bg) 72%);
+}
+
+.breadcrumb,
+.breadcrumb a,
+.meta,
+footer {
+  color: var(--text-tertiary);
+}
+
+.eyebrow,
+.box strong,
+.tldr strong {
+  color: var(--primary);
+}
+
+h1,
+h2,
+h3,
+.lead {
+  color: var(--text);
+}
+
+p,
+li {
+  color: #2F3A4C;
+}
+
+.box,
+.tldr,
+.model,
+.warning,
+.cta,
+.cta-inline,
+.sources,
+.related,
+.cta-box {
+  background: var(--surface);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.cta,
+.cta-inline,
+.cta-box {
+  background: linear-gradient(135deg, rgba(194,68,25,0.10), rgba(212,168,67,0.14));
+}
+
+.btn {
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn:hover {
+  background: var(--primary-dark);
+}
+
+.sources a,
+.related a {
+  color: var(--primary);
+}
+
+footer {
+  border-top: 1px solid var(--border-light);
+  background: var(--surface);
+}
